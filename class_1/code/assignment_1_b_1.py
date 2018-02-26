@@ -13,7 +13,9 @@ w = 800
 h = 800
 height = h / 2
 
+
 ## Binary Star
+"""
 def draw_star(x1, x2, y1, y2, x1_step, y1_step, x2_step, y2_step, x2_is_negative=False):
     while x2 <= height:
         img.add_line(x1, y1, -x2 if x2_is_negative else x2, y2)
@@ -21,12 +23,19 @@ def draw_star(x1, x2, y1, y2, x1_step, y1_step, x2_step, y2_step, x2_is_negative
         y1 += y1_step
         x2 += x2_step
         y2 += y2_step
+"""
+def draw_star(y1, y1_step, x2_step, x2_is_negative=False):
+    x2 = 0
+    while x2 <= height:
+        img.add_line(0, y1, -x2 if x2_is_negative else x2, 0)
+        y1 += y1_step
+        x2 += x2_step
 
 img = SVGImage(w, h, center_origin=True, show_borders_and_origin=False)
-draw_star(0, 0,  height, 0, 0, -4,  4, 0)
-draw_star(0, 0,  height, 0, 0, -8,  8, 0, x2_is_negative=True)
-draw_star(0, 0, -height, 0, 0, 16, 16, 0, x2_is_negative=True)
-draw_star(0, 0, -height, 0, 0, 32, 32, 0)
+draw_star(  height, -4,  4)
+draw_star(  height, -8,  8, x2_is_negative=True)
+draw_star( -height, 16, 16, x2_is_negative=True)
+draw_star( -height, 32, 32)
 
 # non-abstracted code for star
 """
@@ -65,11 +74,20 @@ while x2 <= height:
 
 img.save("test_svg_star.svg")
 
+
 ## "Fibonnaci" Rectangle
 
 #####################
 # non-abstracted code for rectangle
 rect_img = SVGImage(w, h, center_origin=True, show_borders_and_origin=False)
+
+def draw_rect(x1, x2, y1, y2, x1_step, y1_step, x2_step, y2_step, x2_is_negative=False):
+    while x2 <= height:
+        img.add_line(x1, y1, -x2 if x2_is_negative else x2, y2)
+        x1 += x1_step
+        y1 += y1_step
+        x2 += x2_step
+        y2 += y2_step
 
 x1 = -height
 y2 = height
