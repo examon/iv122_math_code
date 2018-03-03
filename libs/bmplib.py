@@ -1,30 +1,37 @@
 from PIL import Image
 
 """
+BMP library
 
-from PIL import Image
+Coordinate system:
 
-# PIL accesses images in Cartesian co-ordinates, so it is Image[columns, rows]
-img = Image.new( 'RGB', (250,250), "black") # create a new black image
-pixels = img.load() # create the pixel map
-
-for i in range(img.size[0]):    # for every col:
-    for j in range(img.size[1]):    # For every row
-        pixels[i,j] = (i, j, 100) # set the colour accordingly
-
-img.show()
-
+- (0, 0) origin is in the upper left corner
+- (x, y): x left -> right, y up -> down
 """
 
 class BMPImage(object):
-    def __init__(self, width=256, height=256, bg="white"):
+    def __init__(self, width=256, height=256, scale=1, bg="white"):
         self.width = width
         self.height = height
-        self.img = Image.new("RGB", (self.width, self.height), bg)
+        self.scale = scale
+
+        self.pixel_width = int(1*scale)
+        self.pixel_height = int(1*scale)
+
+        self.img = Image.new("RGB", (self.width*scale, self.height*scale), bg)
         self.pixels = self.img.load()
+
+    def get_width(self):
+        return self.width
+
+    def get_height(self):
+        return self.height
 
     def save(self, path, file_format="BMP"):
         self.img.save(path, file_format)
 
     def put_pixel(self, x, y, rgb):
-        self.pixels[x, y] = (rgb[0], rgb[1], rgb[2])
+        for i in range(self.pixel_width):
+            for j in range(self.pixel_height):
+                self.pixels[x*self.scale+i, y*self.scale+j] = (rgb[0], rgb[1], rgb[2])
+
