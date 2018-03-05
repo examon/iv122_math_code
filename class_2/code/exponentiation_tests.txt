@@ -1,0 +1,76 @@
+exponent digits= 1
+   python_pow: 0.0 ms
+   binary_exp: 0.0 ms
+binary_exp_v2: 0.0 ms
+    naive_pow: 0.0 ms
+==========
+exponent digits= 2
+   python_pow: 0.0 ms
+   binary_exp: 0.0 ms
+binary_exp_v2: 0.0 ms
+    naive_pow: 0.0 ms
+==========
+exponent digits= 3
+   python_pow: 0.0 ms
+   binary_exp: 0.0 ms
+binary_exp_v2: 0.0 ms
+    naive_pow: 0.1 ms
+==========
+exponent digits= 4
+   python_pow: 0.0 ms
+   binary_exp: 0.1 ms
+binary_exp_v2: 0.0 ms
+    naive_pow: 5.3 ms
+==========
+exponent digits= 5
+   python_pow: 0.0 ms
+   binary_exp: 2.3 ms
+binary_exp_v2: 0.0 ms
+    naive_pow: 377.3 ms
+==========
+exponent digits= 6
+   python_pow: 0.0 ms
+   binary_exp: 59.9 ms
+binary_exp_v2: 0.0 ms
+==========
+exponent digits= 7
+   python_pow: 0.0 ms
+   binary_exp: 3398.3 ms
+binary_exp_v2: 0.0 ms
+==========
+exponent digits= 8
+   python_pow: 0.0 ms
+binary_exp_v2: 0.0 ms
+==========
+exponent digits= 9
+   python_pow: 0.0 ms
+binary_exp_v2: 0.0 ms
+==========
+exponent digits= 10
+   python_pow: 0.0 ms
+binary_exp_v2: 0.0 ms
+==========
+exponent digits= 100
+   python_pow: 0.0 ms
+binary_exp_v2: 0.0 ms
+==========
+exponent digits= 10000
+   python_pow: 1.1 ms
+binary_exp_v2: 2.8 ms
+==========
+exponent digits= 100000
+   python_pow: 10.8 ms
+binary_exp_v2: 27.9 ms
+==========
+exponent digits= 1000000
+   python_pow: 107.8 ms
+binary_exp_v2: 281.4 ms
+==========
+exponent digits= 10000000
+   python_pow: 1088.0 ms
+binary_exp_v2: 2810.7 ms
+==========
+exponent digits= 100000000
+   python_pow: 11075.7 ms
+binary_exp_v2: 28781.2 ms
+==========
