@@ -16,6 +16,12 @@ points="160,20 180,30 200,10 234,80"/>
 
 class SVGImage(object):
     def __init__(self, width=800, height=600, center_origin=False, show_borders_and_origin=False):
+        """
+        width: image width in px
+        height: image height in px
+        center_origin: if True, uses cartesian system (instead of 0,0 at the top left)
+        show_borders_and_origin: if True, prints origin and image borders
+        """
         self.width = width
         self.height = height
         self.center_origin = center_origin
