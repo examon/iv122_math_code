@@ -21,32 +21,46 @@ class Turtle(object):
         self.y = 0
         self.angle = 0
 
-    def forward(self, steps):
+    def forward(self, steps, debug=False):
         """ steps: in pixels
         """
+        print(self.x, self.y, self.angle) if debug else None
         nx = self.x + math.cos(math.radians(self.angle))*steps
         ny = self.y + math.sin(math.radians(self.angle))*steps
         if self.is_pendown:
             self.img.add_line(self.x, self.y, nx, ny)
         self.x = nx
         self.y = ny
+        print(self.x, self.y, self.angle) if debug else None
 
-    def back(self, steps):
-        # TODO
-        pass
+    def back(self, steps, debug=False):
+        """ steps: in pixels
+        """
+        print(self.x, self.y, self.angle) if debug else None
+        nx = -(self.x + math.cos(math.radians(self.angle))*steps)
+        ny = -(self.y + math.sin(math.radians(self.angle))*steps)
+        if self.is_pendown:
+            self.img.add_line(self.x, self.y, nx, ny)
+        self.x = nx
+        self.y = ny
+        print(self.x, self.y, self.angle) if debug else None
 
     def right(self, angle):
         """ angle: in degrees
         """
-        self.angle -= angle
+        self.angle = (self.angle - angle) % 360
 
     def left(self, angle):
         """ angle: in degrees
         """
-        self.angle += angle
+        self.angle = (self.angle + angle) % 360
 
     def penup(self):
+        """ stop drawing
+        """
         self.is_pendown = False
 
     def pendown(self):
+        """ start drawing
+        """
         self.is_pendown = True
