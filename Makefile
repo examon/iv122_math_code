@@ -1,6 +1,6 @@
 LOCAL_SITE_PACKAGES=$(shell python3 -m site --user-site)
 
-install:
+install: clean
 	cp -a libs/* $(LOCAL_SITE_PACKAGES)
 
 clean:
