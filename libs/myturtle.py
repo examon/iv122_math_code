@@ -38,7 +38,7 @@ class Turtle(object):
     def right(self, angle):
         """ angle: in degrees
         """
-        self.right -= angle
+        self.angle -= angle
 
     def left(self, angle):
         """ angle: in degrees
