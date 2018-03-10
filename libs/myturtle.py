@@ -4,8 +4,8 @@ from svglib import SVGImage
 
 
 class Turtle(object):
-    def __init__(self, width=800, height=600, center_origin=False, show_borders_and_origin=False):
-        self.img = SVGImage(width, height, center_origin, show_borders_and_origin)
+    def __init__(self, width=800, height=600, center_origin=False, show_borders_and_origin=False, animate=False, animation_speed=0.1):
+        self.img = SVGImage(width, height, center_origin=center_origin, show_borders_and_origin=show_borders_and_origin, animate=animate, animation_speed=animation_speed)
         # current turtle state
         self.x = 0
         self.y = 0
