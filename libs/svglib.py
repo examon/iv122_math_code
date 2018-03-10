@@ -54,11 +54,14 @@ class SVGImage(object):
         f.close()
 
     def add_boarders_and_origin(self, color="red", width=5):
+        tmp_animate = self.animate
+        self.animate = False
         self.add_line(0, 0, 0, self.height, color, width, center_origin=False)
         self.add_line(0, self.height, self.width, self.height, color, width, center_origin=False)
         self.add_line(self.width, self.height, self.width, 0, color, width, center_origin=False)
         self.add_line(0, 0, self.width, 0, color, width, center_origin=False)
         self.add_circle(0, 0, 3, color, width, color)
+        self.animate = tmp_animate
 
     def add_line(self, x1, y1, x2, y2, color="black", width=1, center_origin=None):
         center_origin = self.center_origin if center_origin is None else center_origin
