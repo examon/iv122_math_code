@@ -37,23 +37,18 @@ class Turtle(object):
         """ steps: in pixels
         """
         print(self.x, self.y, self.angle) if debug else None
-        nx = -(self.x + math.cos(math.radians(self.angle))*steps)
-        ny = -(self.y + math.sin(math.radians(self.angle))*steps)
-        if self.is_pendown:
-            self.img.add_line(self.x, self.y, nx, ny)
-        self.x = nx
-        self.y = ny
+        self.forward(-steps)
         print(self.x, self.y, self.angle) if debug else None
 
     def right(self, angle):
         """ angle: in degrees
         """
-        self.angle = (self.angle - angle) % 360
+        self.angle -= angle
 
     def left(self, angle):
         """ angle: in degrees
         """
-        self.angle = (self.angle + angle) % 360
+        self.angle += angle
 
     def penup(self):
         """ stop drawing
