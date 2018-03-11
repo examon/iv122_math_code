@@ -24,6 +24,12 @@ class Turtle(object):
     def reset_angle(self):
         self.angle = 0
 
+    def set_x(self, x):
+        self.x = x
+
+    def set_y(self, y):
+        self.y = y
+
     def forward(self, steps, color="black", width=1, debug=False):
         """ steps: in pixels
         """
