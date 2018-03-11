@@ -31,7 +31,7 @@ def draw_star(y1, y1_step, x2_step, x2_is_negative=False):
         y1 += y1_step
         x2 += x2_step
 
-img = SVGImage(w, h, center_origin=True, show_borders_and_origin=False)
+img = SVGImage(w, h, center_origin=True, show_borders_and_origin=False, animate=True, animation_speed=0.01)
 draw_star(  height, -4,  4)
 draw_star(  height, -8,  8, x2_is_negative=True)
 draw_star( -height, 16, 16, x2_is_negative=True)
@@ -79,7 +79,7 @@ img.save("test_svg_star.svg")
 
 #####################
 # non-abstracted code for rectangle
-rect_img = SVGImage(w, h, center_origin=True, show_borders_and_origin=False)
+rect_img = SVGImage(w, h, center_origin=True, show_borders_and_origin=False, animate=True, animation_speed=0.05)
 
 def draw_rect(x1, x2, y1, y2, x1_step, y1_step, x2_step, y2_step, x2_is_negative=False):
     while x2 <= height:
