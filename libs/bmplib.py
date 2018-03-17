@@ -1,26 +1,23 @@
+import math
+
 from PIL import Image
 
 """
 BMP library
-
-Coordinate system:
-
-- (0, 0) origin is in the upper left corner
-- (x, y): x left -> right, y up -> down
 """
 
 class BMPImage(object):
-    def __init__(self, width=256, height=256, scale=1, bg="white", origin="upper_left"):
+    def __init__(self, width=256, height=256, scale=1, bg="white", origin="top_left"):
         """
-        origin: upper_left|bottom_left|cartesian
+        origin: top_left|bottom_left|cartesian
         """
         self.width = width
         self.height = height
         self.scale = scale
         self.origin = origin
 
-        self.pixel_width = int(1*scale)
-        self.pixel_height = int(1*scale)
+        self.pixel_width = int(scale)
+        self.pixel_height = int(scale)
 
         self.img = Image.new("RGB", (self.width*scale, self.height*scale), bg)
         self.pixels = self.img.load()
@@ -30,6 +27,17 @@ class BMPImage(object):
 
     def get_height(self):
         return self.height
+
+    def get_pixel(self, x, y):
+        i = 0;
+        j = 0;
+        if self.origin == "bottom_left":
+            return self.pixels[x*self.scale+i, (self.height-y-1)*self.scale+j]
+        elif self.origin == "cartesian":
+            return self.pixels[(x+int(self.width/2))*self.scale+i, (self.height-(y+int(self.height/2))-1)*self.scale+j]
+        elif self.origin == "top_left":
+            return self.pixels[x*self.scale+i, y*self.scale+j]
+        return None
 
     def get_x_coords(self):
         if self.origin == "cartesian":
@@ -48,14 +56,59 @@ class BMPImage(object):
     def save(self, path, file_format="BMP"):
         self.img.save(path, file_format)
 
-    def put_pixel(self, x, y, rgb):
+    def put_pixel(self, x, y, color):
         for i in range(self.pixel_width):
             for j in range(self.pixel_height):
                 if self.origin == "bottom_left":
-                    self.pixels[x*self.scale+i, (self.height-y-1)*self.scale+j] = (rgb[0], rgb[1], rgb[2])
+                    self.pixels[x*self.scale+i, (self.height-y-1)*self.scale+j] = (color[0], color[1], color[2])
                 elif self.origin == "cartesian":
-                    self.pixels[(x+int(self.width/2))*self.scale+i, (self.height-(y+int(self.height/2))-1)*self.scale+j] = (rgb[0], rgb[1], rgb[2])
-                elif self.origin == "upper_left":
-                    self.pixels[x*self.scale+i, y*self.scale+j] = (rgb[0], rgb[1], rgb[2])
+                    self.pixels[(x+int(self.width/2))*self.scale+i, (self.height-(y+int(self.height/2))-1)*self.scale+j] = (color[0], color[1], color[2])
+                elif self.origin == "top_left":
+                    self.pixels[x*self.scale+i, y*self.scale+j] = (color[0], color[1], color[2])
                 else:
                     raise Exception("Invalid origin")
+
+    def put_box(self, x, y, color=(0, 0, 0), width=1):
+        """ draws bos around (x, y) of specified width
+        """
+        assert(width > 0)
+        if width == 1:
+            self.put_pixel(x, y, color=color)
+            return
+        for i in range(x-int(width/2), x+int(width/2)):
+            for j in range(y-int(width/2), y+int(width/2)):
+                self.put_pixel(i, j, color=color)
+
+    def draw_line(self, x1=0, y1=0, x2=0, y2=0, color=(0, 0, 0), width=1, precision=10):
+        """ Draws line
+        precision: more == smoother line, without missing pixels
+
+        implicit:
+        a*x + b*y + c = 0
+        parametric:
+        x = t
+        y = a*t + b
+        """
+        # so we do not divide by 0
+        if x2 == 0:
+            x2 = 1
+
+        # in degrees
+        angle = math.atan(abs(y2-y1)/abs(x2-x1)) * 180 / math.pi
+
+        if x2-x1 < 0:
+            sample = range(abs(x2-x1+1)*precision, -1, -1)
+        else:
+            sample = range(0, (x2-x1)*precision)
+
+        for dx in sample:
+            tan_angle = math.tan(math.radians(angle))
+            dy = dx * math.tan(math.radians(angle))
+            nx = int(x1+dx/precision)
+            ny = int(y1+dy/precision)
+            if x2-x1 <= 0:
+                nx = int(x1-dx/precision)
+            if y2-y1 <= 0:
+                ny = int(y1-dy/precision)
+            self.put_box(nx, ny, color=color, width=width)
+
