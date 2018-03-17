@@ -22,6 +22,10 @@ class BMPImage(object):
         self.img = Image.new("RGB", (self.width*scale, self.height*scale), bg)
         self.pixels = self.img.load()
 
+    def set_origin(self, origin):
+        assert(origin == "top_left" or origin == "bottom_left" or origin == "cartesian")
+        self.origin = origin
+
     def get_width(self):
         return self.width
 
