@@ -85,6 +85,9 @@ class BMPImage(object):
 
     def draw_line(self, x1=0, y1=0, x2=0, y2=0, color=(0, 0, 0), width=1, precision=10):
         """ Draws line
+
+        TODO: this algo is not that good...
+
         precision: more == smoother line, without missing pixels
 
         implicit:
@@ -115,4 +118,3 @@ class BMPImage(object):
             if y2-y1 <= 0:
                 ny = int(y1-dy/precision)
             self.put_box(nx, ny, color=color, width=width)
-
