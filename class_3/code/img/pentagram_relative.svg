@@ -1,0 +1,12 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<line x1="561" y1="300" x2="400" y2="182" stroke="white" stroke-width="5"><animate attributeName="stroke" values="white;black" begin="0s" dur="0.5s" repeatCount="1" fill="freeze"/></line>
+<line x1="400" y1="182" x2="238" y2="299" stroke="white" stroke-width="5"><animate attributeName="stroke" values="white;black" begin="0.5s" dur="0.5s" repeatCount="1" fill="freeze"/></line>
+<line x1="238" y1="299" x2="300" y2="490" stroke="white" stroke-width="5"><animate attributeName="stroke" values="white;black" begin="1.0s" dur="0.5s" repeatCount="1" fill="freeze"/></line>
+<line x1="300" y1="490" x2="500" y2="490" stroke="white" stroke-width="5"><animate attributeName="stroke" values="white;black" begin="1.5s" dur="0.5s" repeatCount="1" fill="freeze"/></line>
+<line x1="500" y1="490" x2="561" y2="300" stroke="white" stroke-width="5"><animate attributeName="stroke" values="white;black" begin="2.0s" dur="0.5s" repeatCount="1" fill="freeze"/></line>
+<line x1="561" y1="300" x2="238" y2="300" stroke="white" stroke-width="5"><animate attributeName="stroke" values="white;black" begin="2.5s" dur="0.5s" repeatCount="1" fill="freeze"/></line>
+<line x1="238" y1="300" x2="500" y2="490" stroke="white" stroke-width="5"><animate attributeName="stroke" values="white;black" begin="3.0s" dur="0.5s" repeatCount="1" fill="freeze"/></line>
+<line x1="500" y1="490" x2="400" y2="182" stroke="white" stroke-width="5"><animate attributeName="stroke" values="white;black" begin="3.5s" dur="0.5s" repeatCount="1" fill="freeze"/></line>
+<line x1="400" y1="182" x2="300" y2="490" stroke="white" stroke-width="5"><animate attributeName="stroke" values="white;black" begin="4.0s" dur="0.5s" repeatCount="1" fill="freeze"/></line>
+<line x1="300" y1="490" x2="561" y2="300" stroke="white" stroke-width="5"><animate attributeName="stroke" values="white;black" begin="4.5s" dur="0.5s" repeatCount="1" fill="freeze"/></line>
+</svg>

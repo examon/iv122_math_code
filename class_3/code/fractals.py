@@ -4,7 +4,7 @@ Tomas Meszaros
 Draws fractals using turtle.
 
 TODO:
--
+- showflake is broken
 """
 
 import math
@@ -12,9 +12,11 @@ import math
 from myturtle import Turtle
 
 
-
 def snowflake():
-    t = Turtle(width=1000, height=1000, center_origin=True, show_borders_and_origin=True, animate=True, animation_speed=0.01)
+    """ Draws snowflake fractal
+    TODO: is broken
+    """
+    t = Turtle(width=1000, height=1000, center_origin=True, show_borders_and_origin=False, animate=True, animation_speed=0.01)
     n = 5
     pentagon_side = 20
     center_angle = 360 / n
@@ -49,12 +51,17 @@ def snowflake():
         t.left(i/2 * turn_angle) # level to 0
         t.back(MAGIC * pentagon_side, width=3)
         t.reset_angle()
-
     t.save("img/snowflake_fractal.svg")
+snowflake()
 
-## Draw tree fractal
+
 def tree():
-    t = Turtle(width=800, height=800, center_origin=True, show_borders_and_origin=True, animate=True, animation_speed=0.005)
+    """ Draws tree fractal
+
+    TODO:
+    - randomize number of branches, angles and lengths
+    """
+    t = Turtle(width=800, height=800, center_origin=True, show_borders_and_origin=False, animate=True, animation_speed=0.005)
 
     t.set_y(-400)
     length = 200
