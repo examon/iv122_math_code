@@ -1,7 +1,6 @@
 """
 Tomas Meszaros
 
-Assignment 2.C.
 Computation of Pi using various methods.
 """
 
@@ -20,7 +19,6 @@ RUN_SECONDS = 1
 def _get_end_time():
     return datetime.datetime.now() + datetime.timedelta(seconds=RUN_SECONDS)
 
-
 def leibniz_formula():
     pi = 0
     subtract = False
@@ -36,9 +34,7 @@ def leibniz_formula():
         else:
             pi += x
             subtract = True
-
     return pi*4
-
 
 def archimedes():
     ai = 2*math.sqrt(3)
@@ -52,9 +48,7 @@ def archimedes():
         b = math.sqrt(a*bi)
         ai = a
         bi = b
-
     return (a, b)
-
 
 def monte_carlo():
     """
@@ -78,9 +72,7 @@ def monte_carlo():
         if xi**2 + yi**2 <= 1:
             inside += 1
         points += 1
-
     return 4 * inside / points
-
 
 def gauss_legendre():
     """ TODO: this seems broken, should have better precision
@@ -106,7 +98,6 @@ def gauss_legendre():
         tn = tn1
         pn = pn1
     return pi
-
 
 def show_precision(pi, my_pi):
     for i, _ in enumerate(pi):

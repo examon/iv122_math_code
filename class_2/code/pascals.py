@@ -31,31 +31,34 @@ def generate_pascals(n=5, d=sys.maxsize):
     return pascals
 
 
-depth = 30
-modulus = 5
-scale = 4
-pascals = generate_pascals(depth, modulus)
-#for row in pascals: print(row)
+def draw_pascals():
+    DEPTH = 30
+    MODULUS = 5
+    SCALE = 20
+    pascals = generate_pascals(DEPTH, MODULUS)
+    #for row in pascals: print(row)
 
-# the magic takes care of redundant column in case of even width
-img = BMPImage(width=(depth*2 if depth*2 % 2 != 0 else depth*2-1), height=depth, scale=scale, bg="black")
+    # the magic takes care of redundant column in case of even width
+    img = BMPImage(width=(DEPTH*2 if DEPTH*2 % 2 != 0 else DEPTH*2-1), height=DEPTH, scale=SCALE, bg="black")
 
-# set color specturm
-spectrum = [0]*(modulus+modulus)
-step = int(255/len(spectrum))
-last = 0
-for i, num in enumerate(spectrum):
-    spectrum[i] += last+step
-    last = spectrum[i]
-print(spectrum)
+    # set color specturm
+    spectrum = [0]*(MODULUS+MODULUS)
+    step = int(255/len(spectrum))
+    last = 0
+    for i, num in enumerate(spectrum):
+        spectrum[i] += last+step
+        last = spectrum[i]
+    #print(spectrum)
 
 
-# draw triangle to img
-spaces = int(depth)-1
-for y in range(len(pascals)):
-    for x in range(y+1):
-        num = pascals[y][x]
-        img.put_pixel(2*x+spaces, y, (spectrum[num], spectrum[num], int((spectrum[num]+spectrum[num])/2)))
-    spaces -= 1
+    # draw triangle to img
+    spaces = int(DEPTH)-1
+    for y in range(len(pascals)):
+        for x in range(y+1):
+            num = pascals[y][x]
+            img.put_pixel(2*x+spaces, y, (spectrum[num], spectrum[num], int((spectrum[num]+spectrum[num])/2)))
+        spaces -= 1
 
-img.save("pascals.bmp")
+    img.save("img/pascals.bmp")
+
+draw_pascals()
