@@ -4,17 +4,16 @@ Tomas Meszaros
 Drawing cool effects.
 """
 
+import random
+
 from bmplib import BMPImage
 
-img = BMPImage(scale=1, width=500, height=500, origin="top_left")
 
 def draw_field(img):
     """ circle implicit
     (x-a)**2 + (y-b)**2 = r**2
     """
-
     box_width = int(img.get_width()/10)
-
     cy = int(box_width/2)
     for i in range(1, int(img.get_height()/box_width)+1):
         cx = int(box_width/2)
@@ -24,38 +23,54 @@ def draw_field(img):
             cx += box_width
         cy += box_width
 
-def draw_circle(img, r1, r2):
+def draw_inverted_circle(img, r1, r2):
     for x in img.get_x_coords():
         for y in img.get_y_coords():
-            if (x)**2 + (y)**2 >= r1**2 and (x)**2 + (y)**2 <= r2**2:
-                #r, g, b = img.get_pixel(x, y)
-                #print(r, g, b)
-                p = img.get_pixel(x, y)
-                if p == (0, 0, 0):
+            if x**2 + y**2 >= r1**2 and x**2 + y**2 <= r2**2:
+                if img.get_pixel(x, y)  == (0, 0, 0):
                     img.put_pixel(x, y, (255, 255, 255))
                 else:
                     img.put_pixel(x, y, (0, 0, 0))
 
+def draw_inverted_ellipse(img, r1, r2, a=1, b=0.5, tilt=1):
+    for x in img.get_x_coords():
+        for y in img.get_y_coords():
+            #if x**2 + y**2 >= r1**2 and x**2 + y**2 <= r2**2:
+            e = (x/a)**2 + (y/b)**2 + (tilt*x*y)
+            if e >= r1**2 and e <= r2**2:
+                if img.get_pixel(x, y)  == (0, 0, 0):
+                    img.put_pixel(x, y, (255, 255, 255))
+                else:
+                    img.put_pixel(x, y, (0, 0, 0))
 
-draw_field(img)
-
-img.put_pixel(0, 0, color=(255, 0, 0))
-img.set_origin("cartesian")
-img.put_pixel(0, 0, color=(255, 0, 0))
-
-# TODO: fix this, cannot write more then 2 inversions
-"""
-num_circles = 10
-for i in range(1, num_circles):
-    print(i)
-    r1 = i*20
-    r2 = r1 + 20
-    draw_circle(img, r1, r2)
-"""
-draw_circle(img, 80, 100)
-draw_circle(img, 60, 80)
-draw_circle(img, 40, 60)
-draw_circle(img, 20, 40)
+def draw_circles(img):
+    num_circles = 20
+    circle_width = 3
+    scale_factor = 1.6
+    for i in range(0, num_circles, 2):
+        r1 = i*(circle_width/2)
+        r2 = r1 + circle_width
+        draw_inverted_circle(img, r1, r2)
+        circle_width *= scale_factor
 
 
-img.save("img/circles_effect.bmp")
+def draw_effect_concentric_circles():
+    img = BMPImage(scale=1, width=1000, height=1000, origin="top_left")
+    draw_field(img)
+    img.set_origin("cartesian")
+    draw_circles(img)
+    img.save("img/circles_effect.bmp")
+
+def draw_effect_ellipses(num_of_ellipses, r1, r2, a, b):
+    img = BMPImage(scale=1, width=1000, height=1000, origin="top_left")
+    draw_field(img)
+    img.set_origin("cartesian")
+
+    for i in range(1, num_of_ellipses+1):
+        draw_inverted_ellipse(img, r1, r2, a=a, b=b, tilt=i)
+    for i in range(-num_of_ellipses, 0):
+        draw_inverted_ellipse(img, r1, r2, a=a, b=b, tilt=i)
+    img.save("img/ellipses_effect_{num_of_ellipses}_{r1}_{r2}_{a}_{b}.bmp".format(num_of_ellipses=num_of_ellipses, r1=r1, r2=r2, a=a, b=b))
+
+for i in range(25, 55):
+    draw_effect_ellipses(i, 200, 700, 0.8, 0.8)
