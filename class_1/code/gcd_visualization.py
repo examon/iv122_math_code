@@ -32,15 +32,15 @@ def gcd_sub_variant(a, b):
         steps += 1
     return (a, steps)
 
-width = 512
-height = 512
-img_divs = BMPImage(width, height)
-img_euclid_steps_mod = BMPImage(width, height)
-img_euclid_steps_sub = BMPImage(width, height)
-img_euclid_steps_mix = BMPImage(width, height)
+WIDTH = 512
+HEIGHT = 512
+img_divs = BMPImage(WIDTH, HEIGHT)
+img_euclid_steps_mod = BMPImage(WIDTH, HEIGHT)
+img_euclid_steps_sub = BMPImage(WIDTH, HEIGHT)
+img_euclid_steps_mix = BMPImage(WIDTH, HEIGHT)
 
-for i in range(int(img_divs.width)):
-    for j in range(img_divs.height):
+for i in range(img_divs.get_width()):
+    for j in range(img_divs.get_height()):
         div_mod, steps_mod = gcd_mod_variant(i, j)
         _, steps_sub = gcd_sub_variant(i, j)
 
@@ -55,8 +55,7 @@ for i in range(int(img_divs.width)):
         img_euclid_steps_sub.put_pixel(i, j, (steps_sub, steps_sub, steps_sub))
         img_euclid_steps_mix.put_pixel(i, j, (steps_mix, steps_mix, steps_mix))
 
-
-img_divs.save("gcd_visualization.bmp")
-img_euclid_steps_mod.save("euclid_steps_mod_visualization.bmp")
-img_euclid_steps_sub.save("euclid_steps_sub_visualization.bmp")
-img_euclid_steps_mix.save("euclid_steps_mix_visualization.bmp")
+img_divs.save("img/gcd_visualization.bmp")
+img_euclid_steps_mod.save("img/euclid_steps_mod_visualization.bmp")
+img_euclid_steps_sub.save("img/euclid_steps_sub_visualization.bmp")
+img_euclid_steps_mix.save("img/euclid_steps_mix_visualization.bmp")

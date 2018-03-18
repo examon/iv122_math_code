@@ -12,4 +12,4 @@ for i in range(img.width):
     for j in range(img.height):
         img.put_pixel(i, j, (i, 0, j))
 
-img.save("test_bmp.bmp")
+img.save("img/test_bmp.bmp")
