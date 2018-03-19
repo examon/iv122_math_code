@@ -120,4 +120,4 @@ for i in exponents:
         d = naive_pow(n, e, m)
         assert(a == d)
 
-    print("="*10)
+    print()
