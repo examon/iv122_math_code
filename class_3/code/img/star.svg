@@ -1,33 +1,33 @@
 <svg width="800" height="600" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<line x1="400" y1="100" x2="359" y2="497" stroke="white" stroke-width="1"><animate attributeName="stroke" values="white;black" begin="0s" dur="0.1s" repeatCount="1" fill="freeze"/></line>
-<line x1="359" y1="497" x2="440" y2="106" stroke="white" stroke-width="1"><animate attributeName="stroke" values="white;black" begin="0.1s" dur="0.1s" repeatCount="1" fill="freeze"/></line>
-<line x1="440" y1="106" x2="320" y2="487" stroke="white" stroke-width="1"><animate attributeName="stroke" values="white;black" begin="0.2s" dur="0.1s" repeatCount="1" fill="freeze"/></line>
-<line x1="320" y1="487" x2="478" y2="120" stroke="white" stroke-width="1"><animate attributeName="stroke" values="white;black" begin="0.30000000000000004s" dur="0.1s" repeatCount="1" fill="freeze"/></line>
-<line x1="478" y1="120" x2="283" y2="469" stroke="white" stroke-width="1"><animate attributeName="stroke" values="white;black" begin="0.4s" dur="0.1s" repeatCount="1" fill="freeze"/></line>
-<line x1="283" y1="469" x2="512" y2="141" stroke="white" stroke-width="1"><animate attributeName="stroke" values="white;black" begin="0.5s" dur="0.1s" repeatCount="1" fill="freeze"/></line>
-<line x1="512" y1="141" x2="251" y2="445" stroke="white" stroke-width="1"><animate attributeName="stroke" values="white;black" begin="0.6s" dur="0.1s" repeatCount="1" fill="freeze"/></line>
-<line x1="251" y1="445" x2="541" y2="169" stroke="white" stroke-width="1"><animate attributeName="stroke" values="white;black" begin="0.7s" dur="0.1s" repeatCount="1" fill="freeze"/></line>
-<line x1="541" y1="169" x2="225" y2="414" stroke="white" stroke-width="1"><animate attributeName="stroke" values="white;black" begin="0.7999999999999999s" dur="0.1s" repeatCount="1" fill="freeze"/></line>
-<line x1="225" y1="414" x2="564" y2="202" stroke="white" stroke-width="1"><animate attributeName="stroke" values="white;black" begin="0.8999999999999999s" dur="0.1s" repeatCount="1" fill="freeze"/></line>
-<line x1="564" y1="202" x2="205" y2="378" stroke="white" stroke-width="1"><animate attributeName="stroke" values="white;black" begin="0.9999999999999999s" dur="0.1s" repeatCount="1" fill="freeze"/></line>
-<line x1="205" y1="378" x2="580" y2="240" stroke="white" stroke-width="1"><animate attributeName="stroke" values="white;black" begin="1.0999999999999999s" dur="0.1s" repeatCount="1" fill="freeze"/></line>
-<line x1="580" y1="240" x2="193" y2="340" stroke="white" stroke-width="1"><animate attributeName="stroke" values="white;black" begin="1.2s" dur="0.1s" repeatCount="1" fill="freeze"/></line>
-<line x1="193" y1="340" x2="589" y2="279" stroke="white" stroke-width="1"><animate attributeName="stroke" values="white;black" begin="1.3s" dur="0.1s" repeatCount="1" fill="freeze"/></line>
-<line x1="589" y1="279" x2="189" y2="299" stroke="white" stroke-width="1"><animate attributeName="stroke" values="white;black" begin="1.4000000000000001s" dur="0.1s" repeatCount="1" fill="freeze"/></line>
-<line x1="189" y1="299" x2="589" y2="320" stroke="white" stroke-width="1"><animate attributeName="stroke" values="white;black" begin="1.5000000000000002s" dur="0.1s" repeatCount="1" fill="freeze"/></line>
-<line x1="589" y1="320" x2="193" y2="259" stroke="white" stroke-width="1"><animate attributeName="stroke" values="white;black" begin="1.6000000000000003s" dur="0.1s" repeatCount="1" fill="freeze"/></line>
-<line x1="193" y1="259" x2="580" y2="359" stroke="white" stroke-width="1"><animate attributeName="stroke" values="white;black" begin="1.7000000000000004s" dur="0.1s" repeatCount="1" fill="freeze"/></line>
-<line x1="580" y1="359" x2="205" y2="221" stroke="white" stroke-width="1"><animate attributeName="stroke" values="white;black" begin="1.8000000000000005s" dur="0.1s" repeatCount="1" fill="freeze"/></line>
-<line x1="205" y1="221" x2="564" y2="397" stroke="white" stroke-width="1"><animate attributeName="stroke" values="white;black" begin="1.9000000000000006s" dur="0.1s" repeatCount="1" fill="freeze"/></line>
-<line x1="564" y1="397" x2="225" y2="185" stroke="white" stroke-width="1"><animate attributeName="stroke" values="white;black" begin="2.0000000000000004s" dur="0.1s" repeatCount="1" fill="freeze"/></line>
-<line x1="225" y1="185" x2="541" y2="430" stroke="white" stroke-width="1"><animate attributeName="stroke" values="white;black" begin="2.1000000000000005s" dur="0.1s" repeatCount="1" fill="freeze"/></line>
-<line x1="541" y1="430" x2="251" y2="154" stroke="white" stroke-width="1"><animate attributeName="stroke" values="white;black" begin="2.2000000000000006s" dur="0.1s" repeatCount="1" fill="freeze"/></line>
-<line x1="251" y1="154" x2="512" y2="458" stroke="white" stroke-width="1"><animate attributeName="stroke" values="white;black" begin="2.3000000000000007s" dur="0.1s" repeatCount="1" fill="freeze"/></line>
-<line x1="512" y1="458" x2="283" y2="130" stroke="white" stroke-width="1"><animate attributeName="stroke" values="white;black" begin="2.400000000000001s" dur="0.1s" repeatCount="1" fill="freeze"/></line>
-<line x1="283" y1="130" x2="478" y2="479" stroke="white" stroke-width="1"><animate attributeName="stroke" values="white;black" begin="2.500000000000001s" dur="0.1s" repeatCount="1" fill="freeze"/></line>
-<line x1="478" y1="479" x2="320" y2="112" stroke="white" stroke-width="1"><animate attributeName="stroke" values="white;black" begin="2.600000000000001s" dur="0.1s" repeatCount="1" fill="freeze"/></line>
-<line x1="320" y1="112" x2="440" y2="493" stroke="white" stroke-width="1"><animate attributeName="stroke" values="white;black" begin="2.700000000000001s" dur="0.1s" repeatCount="1" fill="freeze"/></line>
-<line x1="440" y1="493" x2="359" y2="102" stroke="white" stroke-width="1"><animate attributeName="stroke" values="white;black" begin="2.800000000000001s" dur="0.1s" repeatCount="1" fill="freeze"/></line>
-<line x1="359" y1="102" x2="399" y2="500" stroke="white" stroke-width="1"><animate attributeName="stroke" values="white;black" begin="2.9000000000000012s" dur="0.1s" repeatCount="1" fill="freeze"/></line>
-<line x1="399" y1="500" x2="400" y2="100" stroke="white" stroke-width="1"><animate attributeName="stroke" values="white;black" begin="3.0000000000000013s" dur="0.1s" repeatCount="1" fill="freeze"/></line>
+<line x1="400" y1="100" x2="359" y2="497" stroke="black" stroke-width="1"/>
+<line x1="359" y1="497" x2="440" y2="106" stroke="black" stroke-width="1"/>
+<line x1="440" y1="106" x2="320" y2="487" stroke="black" stroke-width="1"/>
+<line x1="320" y1="487" x2="478" y2="120" stroke="black" stroke-width="1"/>
+<line x1="478" y1="120" x2="283" y2="469" stroke="black" stroke-width="1"/>
+<line x1="283" y1="469" x2="512" y2="141" stroke="black" stroke-width="1"/>
+<line x1="512" y1="141" x2="251" y2="445" stroke="black" stroke-width="1"/>
+<line x1="251" y1="445" x2="541" y2="169" stroke="black" stroke-width="1"/>
+<line x1="541" y1="169" x2="225" y2="414" stroke="black" stroke-width="1"/>
+<line x1="225" y1="414" x2="564" y2="202" stroke="black" stroke-width="1"/>
+<line x1="564" y1="202" x2="205" y2="378" stroke="black" stroke-width="1"/>
+<line x1="205" y1="378" x2="580" y2="240" stroke="black" stroke-width="1"/>
+<line x1="580" y1="240" x2="193" y2="340" stroke="black" stroke-width="1"/>
+<line x1="193" y1="340" x2="589" y2="279" stroke="black" stroke-width="1"/>
+<line x1="589" y1="279" x2="189" y2="299" stroke="black" stroke-width="1"/>
+<line x1="189" y1="299" x2="589" y2="320" stroke="black" stroke-width="1"/>
+<line x1="589" y1="320" x2="193" y2="259" stroke="black" stroke-width="1"/>
+<line x1="193" y1="259" x2="580" y2="359" stroke="black" stroke-width="1"/>
+<line x1="580" y1="359" x2="205" y2="221" stroke="black" stroke-width="1"/>
+<line x1="205" y1="221" x2="564" y2="397" stroke="black" stroke-width="1"/>
+<line x1="564" y1="397" x2="225" y2="185" stroke="black" stroke-width="1"/>
+<line x1="225" y1="185" x2="541" y2="430" stroke="black" stroke-width="1"/>
+<line x1="541" y1="430" x2="251" y2="154" stroke="black" stroke-width="1"/>
+<line x1="251" y1="154" x2="512" y2="458" stroke="black" stroke-width="1"/>
+<line x1="512" y1="458" x2="283" y2="130" stroke="black" stroke-width="1"/>
+<line x1="283" y1="130" x2="478" y2="479" stroke="black" stroke-width="1"/>
+<line x1="478" y1="479" x2="320" y2="112" stroke="black" stroke-width="1"/>
+<line x1="320" y1="112" x2="440" y2="493" stroke="black" stroke-width="1"/>
+<line x1="440" y1="493" x2="359" y2="102" stroke="black" stroke-width="1"/>
+<line x1="359" y1="102" x2="399" y2="500" stroke="black" stroke-width="1"/>
+<line x1="399" y1="500" x2="400" y2="100" stroke="black" stroke-width="1"/>
 </svg>

@@ -16,7 +16,7 @@ def snowflake():
     """ Draws snowflake fractal
     TODO: is broken
     """
-    t = Turtle(width=1000, height=1000, center_origin=True, show_borders_and_origin=False, animate=True, animation_speed=0.01)
+    t = Turtle(width=1000, height=1000, center_origin=True, show_borders_and_origin=False, animate=False, animation_speed=0.01)
     n = 5
     pentagon_side = 20
     center_angle = 360 / n
@@ -61,7 +61,7 @@ def tree():
     TODO:
     - randomize number of branches, angles and lengths
     """
-    t = Turtle(width=800, height=800, center_origin=True, show_borders_and_origin=False, animate=True, animation_speed=0.005)
+    t = Turtle(width=800, height=800, center_origin=True, show_borders_and_origin=False, animate=False, animation_speed=0.005)
 
     t.set_y(-400)
     length = 200

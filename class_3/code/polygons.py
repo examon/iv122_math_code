@@ -13,7 +13,7 @@ from myturtle import Turtle
 
 
 def draw_polygons():
-    t = Turtle(center_origin=True, show_borders_and_origin=False, animate=True, animation_speed=0.05)
+    t = Turtle(center_origin=True, show_borders_and_origin=False, animate=False, animation_speed=0.05)
     def draw_n_polygon(t, polygon_sides, triangle_side=100, line_width=1):
         """ Draws polygon
         polygon_sides: number of sides of the polygon
@@ -41,7 +41,7 @@ draw_polygons()
 
 
 def draw_stars():
-    t = Turtle(center_origin=True, show_borders_and_origin=False, animate=True, animation_speed=0.1)
+    t = Turtle(center_origin=True, show_borders_and_origin=False, animate=False, animation_speed=0.1)
     def draw_n_star(t, star_points, triangle_side=200, line_width=1):
         """ Draws star
         star_points: number of star point
