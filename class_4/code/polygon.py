@@ -17,7 +17,6 @@ def draw_polygon(img, points, color=(0, 0, 0), line_width=2, precision=1):
     - polygon points are not always touching when the angle at point is too small
       (this is is bug in line drawing algo
     """
-
     for i, point in enumerate(points):
         if i < len(points)-1:
             x1 = point[0]
@@ -45,18 +44,7 @@ polygon_points = [(10, 10), (180, 20), (160, 150), (100, 50), (20, 180)]
 draw_polygon(img, polygon_points, line_width=7, precision=10)
 sys.setrecursionlimit(sys.getrecursionlimit()*10)
 
-
-x = 15
-y = 15
-while True:
-    r, g, b = img.get_pixel(x, y)
-    if r == 255 and g == 255 and b == 255:
-        break
-    x = random.choice(range(img.get_width()))
-    y = random.choice(range(img.get_height()))
-
-
-flood_fill(img, x, y)
-
+# TODO: 15 15 is works only sometimes
+flood_fill(img, 15, 15)
 
 img.save("img/polygon.bmp")

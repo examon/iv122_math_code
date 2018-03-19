@@ -79,12 +79,5 @@ def ellipse(save_file, img_scale=1, r=250, a=1, b=0.5):
             if (x/a)**2 + (y/b)**2 <= r**2:
                 c = int(math.sqrt((x/a)**2 + (y/b)**2))
                 img.put_pixel(x, y, (c, c, c))
-    """
-    for t in range(360):
-        for i in range(r):
-            x = int(a*math.cos(math.radians(t)) * i)
-            y = int(b*math.sin(math.radians(t+45)) * i)
-            img.put_pixel(x, y, (x, y, 0))
-    """
     img.save(save_file)
 ellipse("img/ellipse.bmp")
