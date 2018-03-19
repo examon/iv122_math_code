@@ -5,6 +5,10 @@
 ## Drawings using vector graphics
 
 ![star](code/img/test_svg_star.svg)
+
+![Alt text](code/img/test_svg_star.svg?sanitize=true)
+<img src="code/img/test_svg_star.svg?sanitize=true">
+
 ![rect](code/img/test_svg_rect.svg)
 
 ---
