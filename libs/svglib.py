@@ -75,23 +75,13 @@ class SVGImage(object):
         if self.animate:
             color = "white"
 
-        line = '<line x1="%d" y1="%d" x2="%d" y2="%d" stroke="%s" stroke-width="%d"/>' % (x1, y1, x2, y2, color, width)
+        line = '<line x1="%d" y1="%d" x2="%d" y2="%d" stroke="%s" stroke-width="%d" />' % (x1, y1, x2, y2, color, width)
         if self.animate:
-            self.elements.append(self.animate_element(line))
+            self.elements.append(self._animate_line(line))
         else:
             self.elements.append(line)
 
-
-    def add_circle(self, x, y, r, color="black", width=1, fill="black", center_origin=None):
-        center_origin = self.center_origin if center_origin is None else center_origin
-        if center_origin:
-            x += self.width / 2
-            y += self.height / 2
-
-        circle = '<circle cx="%d" cy="%d" r="%d" stroke="%s" stroke-width="%d" fill="%s" />' % (x, y, r, color, width, fill)
-        self.elements.append(circle)
-
-    def animate_element(self, element):
+    def _animate_line(self, element):
         """ Only support for lines
 
         <line id="line1" x1="24" y1="0" x2="800" y2="24" stroke="white" stroke-width="10">
@@ -104,3 +94,35 @@ class SVGImage(object):
         animate = '<animate attributeName="stroke" values="white;black" begin="{BEGIN}s" dur="{SPEED}s" repeatCount="1" fill="freeze"/>'.format(BEGIN=self.last_animation, SPEED=self.animation_speed)
         self.last_animation += self.animation_speed
         return head + animate + tail
+
+    def add_circle(self, x, y, r, color="black", width=1, fill="black", center_origin=None):
+        center_origin = self.center_origin if center_origin is None else center_origin
+        if center_origin:
+            x += self.width / 2
+            y += self.height / 2
+
+        if self.animate:
+            color = "white"
+            fill = "white"
+
+        circle = '<circle cx="%d" cy="%d" r="%d" stroke="%s" stroke-width="%d" fill="%s" />' % (x, y, r, color, width, fill)
+        if self.animate:
+            self.elements.append(self._animate_circle(circle))
+        else:
+            self.elements.append(circle)
+
+    def _animate_circle(self, element):
+        """ Only support for lines
+
+        <line id="line1" x1="24" y1="0" x2="800" y2="24" stroke="white" stroke-width="10">
+            <animate attributeName="stroke" values="white;black" begin="0s" dur="1s" repeatCount="1" fill="freeze" />
+        </line>
+        """
+        head, _ = element.split('/')
+        head += '>'
+        tail = "</circle>"
+        stroke = '<animate attributeName="stroke" values="white;black" begin="{BEGIN}s" dur="{SPEED}s" repeatCount="1" fill="freeze"/>'.format(BEGIN=self.last_animation, SPEED=self.animation_speed)
+        fill = '<animate attributeName="fill" values="white;red" begin="{BEGIN}s" dur="{SPEED}s" repeatCount="1" fill="freeze"/>'.format(BEGIN=self.last_animation, SPEED=self.animation_speed)
+        self.last_animation += self.animation_speed
+        return head + stroke + fill + tail
+
