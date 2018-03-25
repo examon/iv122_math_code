@@ -20,4 +20,16 @@ TODO
 
 ## Convex Hull
 
-TODO
+[code](https://github.com/examon/iv122_math_code/blob/d53165d3c777784b1f24363bd0378e3dc81fee2c/class_5/code/line_intersactions.py#L87)
+
+[animation](https://github.com/examon/iv122_math_code/blob/master/class_5/code/img/convex_hull_animate.svg)
+
+![hull1](code/img/convex_hull.svg)
+
+---
+
+[code](https://github.com/examon/iv122_math_code/blob/d53165d3c777784b1f24363bd0378e3dc81fee2c/class_5/code/line_intersactions.py#L87)
+
+[animation](https://github.com/examon/iv122_math_code/blob/master/class_5/code/img/convex_hull_concentric_animate.svg)
+
+![hull2](code/img/convex_hull_concentric.svg)
