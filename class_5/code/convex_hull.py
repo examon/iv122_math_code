@@ -53,7 +53,7 @@ def get_angle(point1, point2, direction):
 def draw_convex_hull():
     def generate_points(number):
         points = []
-        for i in range(number):
+        for _ in range(number):
             x = get_random_number(BUFFER, IMG_WIDTH-BUFFER)
             y = get_random_number(BUFFER, IMG_HEIGHT-BUFFER)
             points.append((x, y))
@@ -82,8 +82,6 @@ def draw_convex_hull():
             for point2 in points:
                 if point1 == point2:
                     continue
-                x1, y1 = point1
-                x2, y2 = point2
                 angle = get_angle(point1, point2, direction)
 
                 if angle <= candidate_angle:
@@ -118,7 +116,7 @@ def draw_convex_hull():
 
         ## remove used points
         for line in lines:
-            x1, y1, x2, y2 = line
+            x1, y1, _, _ = line
             print(line)
             points.remove((x1, y1))
             print(points)
