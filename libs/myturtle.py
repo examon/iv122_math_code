@@ -30,6 +30,18 @@ class Turtle(object):
     def set_y(self, y):
         self.y = y
 
+    def set_angle(self, angle):
+        self.angle = angle
+
+    def get_x(self):
+        return self.x
+
+    def get_y(self):
+        return self.y
+
+    def get_angle(self):
+        return self.angle
+
     def forward(self, steps, color="black", width=1, debug=False):
         """ steps: in pixels
         """
