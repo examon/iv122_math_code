@@ -4,8 +4,9 @@
 
 ## L-Systems
 
+
 ### Koch Snowflake
-[code](https://github.com/examon/iv122_math_code/blob/d53165d3c777784b1f24363bd0378e3dc81fee2c/class_5/code/line_intersactions.py#L87)
+[code](https://github.com/examon/iv122_math_code/blob/4091dad0481f3196c27dbe586036528392617243/class_6/code/lsystems.py#L40)
 
 [animation](code/img/koch_snowflake_animate.svg)
 
@@ -18,8 +19,9 @@ depth = 6
 
 ![lines](code/img/koch_snowflake.svg)
 
+
 ### Sierpinski Triangle
-[code](https://github.com/examon/iv122_math_code/blob/d53165d3c777784b1f24363bd0378e3dc81fee2c/class_5/code/line_intersactions.py#L87)
+[code](https://github.com/examon/iv122_math_code/blob/4091dad0481f3196c27dbe586036528392617243/class_6/code/lsystems.py#L52)
 
 [animation](code/img/sierpinski_triangle_animate.svg)
 
@@ -32,8 +34,9 @@ depth = 8
 
 ![lines](code/img/sierpinski_triangle.svg)
 
+
 ### Hilbert Curve
-[code](https://github.com/examon/iv122_math_code/blob/d53165d3c777784b1f24363bd0378e3dc81fee2c/class_5/code/line_intersactions.py#L87)
+[code](https://github.com/examon/iv122_math_code/blob/4091dad0481f3196c27dbe586036528392617243/class_6/code/lsystems.py#L65)
 
 [animation](code/img/hilbert_curve_animate.svg)
 
