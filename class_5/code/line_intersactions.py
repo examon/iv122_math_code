@@ -64,7 +64,7 @@ def intersect(line1, line2):
             if px >= x3 and px <= x4 and py >= y3 and py <= y4:
                 l2 = True
         else:
-            if px >= x4 and px <= x4 and py <= y3 and py >= y4:
+            if px >= x3 and px <= x4 and py <= y3 and py >= y4:
                 l2 = True
     else:
         if y3 <= y4:
