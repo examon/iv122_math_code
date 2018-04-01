@@ -1,23 +1,51 @@
 # Class 6
 
+- TODO: update commit hashes
+
 ---
 
-## Chaos Game
+---
+
+# Chaos Game
+
+## Sierpinksi Triangle
+
+Sierpinsky triangle after `1000`,`10000`,`100000` and `1000000` iterations with `r=0.5`.
+
+![s](code/img/chaos_game_sierpinski_r_0.5_after_1000.bmp)
+![s](code/img/chaos_game_sierpinski_r_0.5_after_10000.bmp)
+![s](code/img/chaos_game_sierpinski_r_0.5_after_100000.bmp)
+![s](code/img/chaos_game_sierpinski_r_0.5_after_1000000.bmp)
+
+
+Sierpinsky triangle after `1000000` iterations with `r=[0.1 .. 0.9]`.
+
+![s](code/img/chaos_game_sierpinski_r_0.1_after_1000000.bmp)
+![s](code/img/chaos_game_sierpinski_r_0.2_after_1000000.bmp)
+![s](code/img/chaos_game_sierpinski_r_0.3_after_1000000.bmp)
+![s](code/img/chaos_game_sierpinski_r_0.4_after_1000000.bmp)
+![s](code/img/chaos_game_sierpinski_r_0.5_after_1000000.bmp)
+![s](code/img/chaos_game_sierpinski_r_0.6_after_1000000.bmp)
+![s](code/img/chaos_game_sierpinski_r_0.7_after_1000000.bmp)
+![s](code/img/chaos_game_sierpinski_r_0.8_after_1000000.bmp)
+![s](code/img/chaos_game_sierpinski_r_0.9_after_1000000.bmp)
+
+---
+
+---
+
+# Feigenbaum Diagram
 
 TODO
 
 ---
 
-## Feigenbaum Diagram
-
-TODO
-
 ---
 
-## L-Systems
+# L-Systems
 
 
-### Koch Snowflake
+## Koch Snowflake
 [code](https://github.com/examon/iv122_math_code/blob/d23fe8339b0874d3592801556019392d2e1e0e60/class_6/code/lsystems.py#L65)
 
 [animation](code/img/koch_snowflake_animate.svg)
@@ -32,7 +60,7 @@ depth = 6
 ![lines](code/img/koch_snowflake.svg)
 
 
-### Sierpinski Triangle
+## Sierpinski Triangle
 [code](https://github.com/examon/iv122_math_code/blob/d23fe8339b0874d3592801556019392d2e1e0e60/class_6/code/lsystems.py#L78)
 
 [animation](code/img/sierpinski_triangle_animate.svg)
@@ -47,7 +75,7 @@ depth = 8
 ![lines](code/img/sierpinski_triangle.svg)
 
 
-### Hilbert Curve
+## Hilbert Curve
 [code](https://github.com/examon/iv122_math_code/blob/d23fe8339b0874d3592801556019392d2e1e0e60/class_6/code/lsystems.py#L91)
 
 [animation](code/img/hilbert_curve_animate.svg)
@@ -63,9 +91,9 @@ depth = 4
 ![lines](code/img/hilbert_curve.svg)
 
 
-### Trees
+## Trees
 
-#### Basic Tree
+### Basic Tree
 [code](https://github.com/examon/iv122_math_code/blob/d23fe8339b0874d3592801556019392d2e1e0e60/class_6/code/lsystems.py#L105)
 
 [animation](code/img/basic_tree_animate.svg)
@@ -82,7 +110,7 @@ depth = 9
 ![basic_tree](code/img/basic_tree.svg)
 
 
-#### Fancy Tree 1
+### Fancy Tree 1
 [code](https://github.com/examon/iv122_math_code/blob/d23fe8339b0874d3592801556019392d2e1e0e60/class_6/code/lsystems.py#L120)
 
 [animation](code/img/fancy_tree_1_animate.svg)
@@ -99,7 +127,7 @@ depth = 5
 ![fancy_tree_1](code/img/fancy_tree_1.svg)
 
 
-#### Fancy Tree 2
+### Fancy Tree 2
 [code](https://github.com/examon/iv122_math_code/blob/d23fe8339b0874d3592801556019392d2e1e0e60/class_6/code/lsystems.py#L134)
 
 [animation](code/img/fancy_tree_2_animate.svg)
@@ -116,7 +144,7 @@ depth = 5
 ![fancy_tree_2](code/img/fancy_tree_2.svg)
 
 
-#### Stochastic Tree
+### Stochastic Tree
 [code](https://github.com/examon/iv122_math_code/blob/d23fe8339b0874d3592801556019392d2e1e0e60/class_6/code/lsystems.py#L148)
 
 ```
