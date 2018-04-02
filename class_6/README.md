@@ -1,7 +1,5 @@
 # Class 6
 
-- TODO: update commit hashes
-
 ---
 
 ---
@@ -9,6 +7,8 @@
 # Chaos Game
 
 ## Sierpinksi Triangle
+
+[code](https://github.com/examon/iv122_math_code/blob/d9fd87bf268ad54041d3b9c13b9f5b2734477644/class_6/code/chaos_game.py#L45)
 
 Sierpinsky triangle after `1000`,`10000`,`100000` and `1000000` iterations with `r=0.5`.
 
@@ -29,7 +29,7 @@ Sierpinsky triangle after `1000000` iterations with `r=[0.1 .. 0.9]`.
 ![s](code/img/chaos_game_sierpinski_r_0.7_after_1000000.bmp)
 ![s](code/img/chaos_game_sierpinski_r_0.8_after_1000000.bmp)
 ![s](code/img/chaos_game_sierpinski_r_0.9_after_1000000.bmp)
---->
+-->
 
 ---
 
@@ -37,7 +37,7 @@ Sierpinsky triangle after `1000000` iterations with `r=[0.1 .. 0.9]`.
 
 # Feigenbaum Diagram
 
-[code](https://github.com/examon/iv122_math_code/blob/d23fe8339b0874d3592801556019392d2e1e0e60/class_6/code/lsystems.py#L65)
+[code](https://github.com/examon/iv122_math_code/blob/d9fd87bf268ad54041d3b9c13b9f5b2734477644/class_6/code/feigenbaum_diagram.py#L10)
 
 - Using logistic equation:
 ```
@@ -80,7 +80,7 @@ x = [0.875, 1]
 
 
 ## Koch Snowflake
-[code](https://github.com/examon/iv122_math_code/blob/d23fe8339b0874d3592801556019392d2e1e0e60/class_6/code/lsystems.py#L65)
+[code](https://github.com/examon/iv122_math_code/blob/d23fe8339b0874d3592801556019392d2e1e0e60/class_6/code/lsystems.py#L66)
 
 [animation](code/img/koch_snowflake_animate.svg)
 
