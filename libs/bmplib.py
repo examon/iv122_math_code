@@ -83,6 +83,13 @@ class BMPImage(object):
             for j in range(y-int(width/2), y+int(width/2)):
                 self.put_pixel(i, j, color=color)
 
+    def draw_rect(self, x1, y1, x2, y2, color=(0, 0, 0), width=1, precision=1000):
+        self.draw_line(x1, y1, x1+1, y2, color, width, precision)
+        self.draw_line(x1, y2+1, x2, y2, color, width, precision)
+        self.draw_line(x2, y2, x2+1, y1, color, width, precision)
+        self.draw_line(x2, y1+1, x1, y1, color, width, precision)
+
+
     def draw_line(self, x1=0, y1=0, x2=0, y2=0, color=(0, 0, 0), width=1, precision=10):
         """ Draws line
 
@@ -101,7 +108,10 @@ class BMPImage(object):
             x2 = 1
 
         # in degrees
+        x1 += 0.000001
         angle = math.atan(abs(y2-y1)/abs(x2-x1)) * 180 / math.pi
+        x1 = int(x1)
+        x2 = int(x2)
 
         if x2-x1 < 0:
             sample = range(abs(x2-x1+1)*precision, -1, -1)
