@@ -17,7 +17,7 @@ Sierpinsky triangle after `1000`,`10000`,`100000` and `1000000` iterations with 
 ![s](code/img/chaos_game_sierpinski_r_0.5_after_100000.bmp)
 ![s](code/img/chaos_game_sierpinski_r_0.5_after_1000000.bmp)
 
-
+<!---
 Sierpinsky triangle after `1000000` iterations with `r=[0.1 .. 0.9]`.
 
 ![s](code/img/chaos_game_sierpinski_r_0.1_after_1000000.bmp)
@@ -29,6 +29,7 @@ Sierpinsky triangle after `1000000` iterations with `r=[0.1 .. 0.9]`.
 ![s](code/img/chaos_game_sierpinski_r_0.7_after_1000000.bmp)
 ![s](code/img/chaos_game_sierpinski_r_0.8_after_1000000.bmp)
 ![s](code/img/chaos_game_sierpinski_r_0.9_after_1000000.bmp)
+--->
 
 ---
 
@@ -36,7 +37,40 @@ Sierpinsky triangle after `1000000` iterations with `r=[0.1 .. 0.9]`.
 
 # Feigenbaum Diagram
 
-TODO
+[code](https://github.com/examon/iv122_math_code/blob/d23fe8339b0874d3592801556019392d2e1e0e60/class_6/code/lsystems.py#L65)
+
+- Using logistic equation:
+```
+x1 = r * x0 * (1 - x0),  x0 in [0, 1], r in [0, 4]
+```
+
+- Specific areas of the diagram (`r` is on x-axis, `x` is on y-axis):
+ - Calling function `feigenbaum_diagram(r1=0, r2=4, x1=0, x2=1)` will get us portion of the diagram with `r=[0, 4]` and `x=[0, 1]`.
+
+```
+r = [0, 4]
+x = [0, 1]
+```
+![f](code/img/feigenbaum_diagram_r1_0_r2_4_x1_0_x2_1.bmp)
+
+```
+r = [2, 4]
+x = [0.5, 1]
+```
+![f](code/img/feigenbaum_diagram_r1_2_r2_4_x1_0.5_x2_1.bmp)
+
+```
+r = [3, 4]
+x = [0.75, 1]
+```
+![f](code/img/feigenbaum_diagram_r1_3_r2_4_x1_0.75_x2_1.bmp)
+
+```
+r = [3.5, 4]
+x = [0.875, 1]
+```
+![f](code/img/feigenbaum_diagram_r1_3.5_r2_4_x1_0.875_x2_1.bmp)
+
 
 ---
 
