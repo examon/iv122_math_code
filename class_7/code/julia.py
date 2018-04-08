@@ -5,6 +5,7 @@ Draws Julia set
 """
 
 import math
+
 from bmplib import BMPImage
 
 ITERS = 250
@@ -12,7 +13,6 @@ WIDTH = 300
 HEIGHT = 200
 RES_X = int(1.4*WIDTH)
 RES_Y = int(1.4*HEIGHT)
-WHITE = (255, 255, 255)
 
 
 def map_point(x, img_x1, img_x2, to_x1, to_x2):
@@ -52,7 +52,6 @@ def draw_julia(c, r1=-2, r2=2, i1=-2, i2=2, tag=""):
             ny = y*HEIGHT/4
             img.put_pixel(nx, ny, color)
     img.save("img/julia/{TAG}.bmp".format(TAG=tag, CR=c.real, CI=c.imag))
-
 
 def julia_standard():
     real = -0.8
