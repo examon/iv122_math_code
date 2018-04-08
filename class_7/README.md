@@ -4,6 +4,8 @@
 
 ## Mandelbrot Set
 
+[code](https://github.com/examon/iv122_math_code/blob/master/class_7/code/mandelbrot.py)
+
 Color is picet based on the number of iterations for `z` to get bigger than `2`.
 
 Mandelbrot set `z = z*z + c` with zoom targeting point `c = tx + ty*i`, where
@@ -17,6 +19,8 @@ ty = 0.131825904205311970493132056385139
 ---
 
 ## Julia Set
+
+[code](https://github.com/examon/iv122_math_code/blob/master/class_7/code/julia.py)
 
 Color is picet based on the number of iterations for `z` to get bigger than `2`.
 
