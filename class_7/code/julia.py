@@ -63,7 +63,7 @@ def julia_standard():
         print(val/frames)
         c = complex(real, val/frames)
         draw_julia(c, tag="%04d" % i)
-julia_standard()
+#julia_standard()
 
 def julia_francy():
     base = (0.7885*math.e)

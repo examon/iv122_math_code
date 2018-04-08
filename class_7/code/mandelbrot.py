@@ -4,22 +4,15 @@ Tomas Meszaros
 Drawing of Mandelbrot set
 """
 
-import cmath
 import math
 
 from bmplib import BMPImage
-
 
 WIDTH = 600
 HEIGHT = int(2*(WIDTH/3))
 RES_X = int(1.01*WIDTH)
 RES_Y = int(1.01*HEIGHT)
-
 ITERS = 66.5
-
-WHITE = (255, 255, 255)
-BLACK = (0, 0, 0)
-
 
 def map_point(x, img_x1, img_x2, to_x1, to_x2):
     img_size = abs(img_x1-img_x2)
@@ -70,7 +63,7 @@ def draw_mandelbrot(r1=-2, r2=1, i1=-1, i2=1, tag=""):
             put_pixel(img, nx, ny, color)
     img.save("img/mandelbrot/{TAG}mandelbrot_{R1}_{R2}_{I1}_{I2}.bmp".format(TAG=tag, R1=r1, R2=r2, I1=i1, I2=i2))
 
-def make_mandelbrot__zoomed_sequence():
+def make_mandelbrot_zoomed_sequence():
     r1 = -2
     r2 = 1
     i1 = -1
@@ -96,6 +89,7 @@ def make_mandelbrot__zoomed_sequence():
         cx = abs(tx-(r1+r2)/2)/(0.8+1/zoom_lvl)
         cy = abs(ty-(i1+i2)/2)/(0.8+1/zoom_lvl)
 
+        # zoom to the target point
         if abs(tx-((r1+cx)+(r2+cx))/2) < abs(tx-((r1-cx)+(r2-cx))/2):
             r1 += cx
             r2 += cx
@@ -110,4 +104,4 @@ def make_mandelbrot__zoomed_sequence():
             i1 -= cy
             i2 -= cy
 
-make_mandelbrot__zoomed_sequence()
+make_mandelbrot_zoomed_sequence()
