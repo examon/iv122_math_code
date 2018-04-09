@@ -50,7 +50,7 @@ def draw_mandelbrot(r1=-2, r2=1, i1=-1, i2=1, tag=""):
     #iters = 50+math.log(((4/abs(dif_r))), 10)**5
     print("cx: %f, cy: %f, r1: %f, r2: %f, i1: %f, i2: %f, zoom_lvl: %f, iters: %f" % (cx, cy, r1, r2, i1, i2, zoom_lvl, iters))
 
-    img = BMPImage(width=WIDTH, height=HEIGHT, scale=1, bg="white", origin="cartesian")
+    img = BMPImage(width=WIDTH, height=HEIGHT, scale=1, bg="red", origin="cartesian")
     for xi in range(RES_X):
         x = r1+dif_r*(xi/RES_X)
         for yi in range(RES_Y):
@@ -68,15 +68,15 @@ def make_mandelbrot_zoomed_sequence():
     r2 = 1
     i1 = -1
     i2 = 1
-    frames = 100
-    zoom_by = 9
+    frames = 1000
+    zoom_by = 10
 
     # target zoom coordinates (found on the net)
     tx = -0.743643887037158704752191506114774
     ty = 0.131825904205311970493132056385139
 
     for i in range(frames):
-        frame_id = "%02d_" % i
+        frame_id = "%06d_" % i
         draw_mandelbrot(r1, r2, i1, i2, tag=frame_id)
         zoom = (abs(r1)-abs(r2))/zoom_by
         zoom_lvl = 3*abs(r1-r2)
