@@ -61,6 +61,5 @@ def draw_newton(r1=-2, r2=2, i1=-2, i2=2, tag=""):
             nx = x*WIDTH/4
             ny = y*HEIGHT/4
             img.put_pixel(nx, ny, pick_color(root))
-    img.save("img/newton/{TAG}.bmp".format(TAG=tag))
-
+    img.save("img/newton.bmp".format(TAG=tag))
 draw_newton()

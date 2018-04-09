@@ -3,6 +3,10 @@ Tomas Meszaros
 
 Drawing of Mandelbrot set
 
+NOTES:
+- zoom points:
+    http://colinlmiller.com/fractals/gallery.htm
+
 TODO:
 - continuous coloring:
     http://www.paridebroggi.com/2015/05/fractal-continuous-coloring.html
@@ -33,7 +37,8 @@ def in_mandelbrot(x, y, iters):
         if (zn.real*zn.real + zn.imag*zn.imag) > 4:
             # map number of iterations to color
             c = int(map_point(i, 0, 255, 0, int(iters)))+1
-            return (c%255+int(math.sqrt(c)), int(i/c), int(i/c))
+            #return (c%255+int(math.sqrt(c)), int(i/c), int(i/c))
+            return (int(i/c), c%255+int(math.sqrt(c)), int(i/c))
     return (0, 0, 0)
 
 def put_pixel(img, x, y, color):
@@ -76,8 +81,10 @@ def make_mandelbrot_zoomed_sequence():
     zoom_by = 10
 
     # target zoom coordinates (found on the net)
-    tx = -0.743643887037158704752191506114774
-    ty = 0.131825904205311970493132056385139
+    #tx = -0.743643887037158704752191506114774
+    #ty = 0.131825904205311970493132056385139
+    tx = -1.77810334274064037110522326038852639499207961414628307584575173232969154440
+    ty = +0.00767394242121339392672671947893471774958985018535019684946671264012302378
 
     for i in range(frames):
         frame_id = "%06d_" % i
