@@ -2,6 +2,10 @@
 Tomas Meszaros
 
 Drawing of Mandelbrot set
+
+TODO:
+- continuous coloring:
+    http://www.paridebroggi.com/2015/05/fractal-continuous-coloring.html
 """
 
 import math

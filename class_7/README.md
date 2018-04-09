@@ -6,7 +6,7 @@
 
 [code](https://github.com/examon/iv122_math_code/blob/master/class_7/code/mandelbrot.py)
 
-Color is picet based on the number of iterations for `z` to get bigger than `2`.
+Color is picked based on the number of iterations for `z` to get bigger than `2`.
 
 Mandelbrot set `z = z*z + c` with zoom targeting point `c = tx + ty*i`, where
 ```
@@ -22,7 +22,7 @@ ty = 0.131825904205311970493132056385139
 
 [code](https://github.com/examon/iv122_math_code/blob/master/class_7/code/julia.py)
 
-Color is picet based on the number of iterations for `z` to get bigger than `2`.
+Color is picked based on the number of iterations for `z` to get bigger than `2`.
 
 Julia set `z = z*z + c` with changing `c`.</br>
 `c = 0.7885*e^(ia)`, where `a` is from `[0, 3*pi]`.
@@ -38,4 +38,10 @@ Julia set `z = z*z + c` with changing `c` (animation is also reversed and added 
 
 ## Newton Fractal
 
-TODO
+[code](https://github.com/examon/iv122_math_code/blob/master/class_7/code/newton.py)
+
+Color is picked based on the distance to the roots.
+
+Newton fractal on the `f(z) = z^3 - 1`.
+
+![](code/img/newton.bmp)
