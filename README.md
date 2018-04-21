@@ -8,3 +8,4 @@
 - [Class 6](class_6/README.md)
 - [Class 7](class_7/README.md)
 - [Class 8](class_8/README.md)
+- [Class 9](class_9/README.md)
