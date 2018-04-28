@@ -4,6 +4,8 @@
 
 ## Monty Hall Simulations
 
+[code](code/monty_hall.py)
+
 [Monty Hall problem](https://en.wikipedia.org/wiki/Monty_Hall_problem)
 
 Suppose you're on a game show, and you're given the choice of three doors:<br>
@@ -25,13 +27,12 @@ opens another door, say No. 3, which has a goat. He then says to you,<br>
  - `strategy: random_change_pick, win chance: 0.492`
 
 Simulation is using `1000` iterations.<br>
-[code](code/monty_hall.py)
 
 ---
 
 ## Testing Randomness
 
-[code with testing methods](code/random_numbers.py)
+[code](code/random_numbers.py)
 
 ### random1.txt
 - [data](code/data/random1.txt)
@@ -238,7 +239,9 @@ consecutive number frequency:
 
 ## Central Limit Theorem
 
-``` a
+[code](code/central_limit_theorem.py)
+
+``` math
 fair = fair dice
 weighted = weighted dice, proportional to the number on the side
 inverse = weighted dice, inversely proportional to the number on the side
