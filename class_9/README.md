@@ -238,7 +238,45 @@ consecutive number frequency:
 
 ## Central Limit Theorem
 
-`TODO`
+``` a
+fair = fair dice
+weighted = weighted dice, proportional to the number on the side
+inverse = weighted dice, inversely proportional to the number on the side
+
+- When using the fair dice, the more rolls we do to compute average,
+  the closer the average will be to 3.5=(1+2+3+4+5+6)/6.
+- When using weighted dice, the average should be 4.33=(6*6+5*5+4*4+3*3+2*2+1*1)/(6+5+4+3+2+1)
+- When using inverse dice, the average should be 2.66=(6*1+5*2+4*3+3*4+2*5+1*6)/(6+5+4+3+2+1)
+```
+
+```
+We are going to run first set of 4 experiments.
+In each of them, we are going to roll the dice 10, 100, 1000, 10000 times,
+compute the average and repeat this 1000 times.
+
+The more rolls we do in order to compute the average, the more precise the average will get.
+```
+
+![](code/img/dice_histogram_samples_1000_rolls_10.png)
+![](code/img/dice_histogram_samples_1000_rolls_100.png)
+![](code/img/dice_histogram_samples_1000_rolls_1000.png)
+![](code/img/dice_histogram_samples_1000_rolls_10000.png)
+
+
+```
+In the second set of experiments, We are rolling the dice always 1000 times to
+compute the average.
+But this time, we are going to repeat this experiment 10, 100, 1000, 10000 times.
+
+The more iterations of the experiment we do, the more defined normal distribution we should see.
+```
+
+![](code/img/dice_histogram_samples_10_rolls_1000.png)
+![](code/img/dice_histogram_samples_100_rolls_1000.png)
+![](code/img/dice_histogram_samples_1000_rolls_1000.png)
+![](code/img/dice_histogram_samples_10000_rolls_1000.png)
+
+
 
 ---
 

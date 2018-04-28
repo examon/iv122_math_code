@@ -25,7 +25,7 @@ def run(strategy, iterations=1000):
             win += 1
         else:
             nowin += 1
-    print("strategy: {STRATEGY}, win change: {WIN_CHANCE}".format(STRATEGY=strategy.__name__, WIN_CHANCE=win/iterations))
+    print("strategy: {STRATEGY}, win chance: {WIN_CHANCE}".format(STRATEGY=strategy.__name__, WIN_CHANCE=win/iterations))
 
 def not_changing_pick():
     """ Player does not change his pick.
