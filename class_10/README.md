@@ -58,9 +58,24 @@ The more closer to red the lines is, the more iteration it took to compute it.
 
 ---
 
-## Clusters Detection
+## k-means Clustering
 
-![](code/img/clusters_detection_faithful.png)
+dataset: [faithful](code/data/faithful.txt)
 
-![](code/img/clusters_detection_linreg.png)
+![](code/img/clusters_detection_init_0_faithful.png) ![](code/img/clusters_detection_after_0_faithful.png)
+![](code/img/clusters_detection_init_1_faithful.png) ![](code/img/clusters_detection_after_1_faithful.png)
+![](code/img/clusters_detection_init_2_faithful.png) ![](code/img/clusters_detection_after_2_faithful.png)
+
+dataset: [linreg](code/data/linreg.txt)
+
+![](code/img/clusters_detection_init_0_linreg.png) ![](code/img/clusters_detection_after_0_linreg.png)
+![](code/img/clusters_detection_init_1_linreg.png) ![](code/img/clusters_detection_after_1_linreg.png)
+![](code/img/clusters_detection_init_2_linreg.png) ![](code/img/clusters_detection_after_2_linreg.png)
+
+dataset: [test](code/data/test.txt)
+
+![](code/img/clusters_detection_init_0_test.png) ![](code/img/clusters_detection_after_0_test.png)
+![](code/img/clusters_detection_init_1_test.png) ![](code/img/clusters_detection_after_1_test.png)
+![](code/img/clusters_detection_init_2_test.png) ![](code/img/clusters_detection_after_2_test.png)
+![](code/img/clusters_detection_init_3_test.png) ![](code/img/clusters_detection_after_3_test.png)
 
