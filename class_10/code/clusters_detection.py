@@ -28,7 +28,7 @@ PLUS_MARKER = '+'
 
 def generate_data(filename, num=20, valmin=0, valmax=100):
     f = open(filename, 'w')
-    for i in range(num):
+    for _ in range(num):
         f.write("%d %d\n" % (get_random(valmin, valmax), get_random(valmin, valmax)))
     f.close()
 
@@ -49,7 +49,7 @@ def get_random(x, y):
 
 def plot_data(x, y, marker):
     assert len(x) == len(y)
-    for i, val in enumerate(x):
+    for i, _ in enumerate(x):
         plt.plot(x[i], y[i], marker)
 
 def points_distance(x1, y1, x2, y2):
@@ -63,9 +63,9 @@ def _get_new_center(points):
         new_y += val[1]
     return (new_x/len(points), new_y/len(points))
 
-def _plot_centers(plt, centers):
+def _plot_centers(plot, centers):
     for i, center in enumerate(centers):
-        plt.plot(center[0], center[1], BLACK+SQUARE_MARKER)
+        plot.plot(center[0], center[1], BLACK+SQUARE_MARKER)
 
 
 def _get_random_centers(x, y, num_of_centers):

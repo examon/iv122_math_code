@@ -60,6 +60,13 @@ The more closer to red the lines is, the more iteration it took to compute it.
 
 ## k-means Clustering
 
+[code](code/clusters_detection.py)
+
+Plots of the k-means algorithm detecting clusters (after 3 or 4 iterations) on
+various datasets.
+
+Black squares are centers of clusters during the running of the algorithm.
+
 dataset: [faithful](code/data/faithful.txt)
 
 ![](code/img/clusters_detection_init_0_faithful.png) ![](code/img/clusters_detection_after_0_faithful.png)
@@ -78,4 +85,3 @@ dataset: [test](code/data/test.txt)
 ![](code/img/clusters_detection_init_1_test.png) ![](code/img/clusters_detection_after_1_test.png)
 ![](code/img/clusters_detection_init_2_test.png) ![](code/img/clusters_detection_after_2_test.png)
 ![](code/img/clusters_detection_init_3_test.png) ![](code/img/clusters_detection_after_3_test.png)
-
