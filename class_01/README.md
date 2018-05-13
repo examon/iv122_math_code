@@ -4,6 +4,8 @@
 
 ## Drawings using vector graphics
 
+[code](code/star_and_rectangle.py)
+
 ![star](code/img/test_svg_star.svg)
 
 ![rect](code/img/test_svg_rect.svg)
@@ -11,6 +13,10 @@
 ---
 
 ## Ulam Spiral
+
+[Wikipedia link](https://en.wikipedia.org/wiki/Ulam_spiral)
+
+[code](code/ulam_spiral.py)
 
 ### Primes
 ![ulam](code/img/ulam_spiral_primes.bmp)
@@ -23,6 +29,8 @@
 ---
 
 ## GCD Visualization
+
+[code](code/gcd_visualization.py)
 
 ![gcd](code/img/gcd_visualization.bmp)
 
