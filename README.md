@@ -1,4 +1,4 @@
-# Classes
+# IV122 - Mathematics and programming
 
 ### Class 1 - Introduction
 - [Class 1 page](class_01/README.md)
