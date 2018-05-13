@@ -26,8 +26,12 @@
  - Polygon
  - Effects
 
+### Class 5 - Geometric algorithms
+- [Class 5 page](class_05/README.md)
+ - Random lines intersections
+ - **TODO** Triangulation
+ - Convex hull
 
-- [Class 5](class_05/README.md)
 - [Class 6](class_06/README.md)
 - [Class 7](class_07/README.md)
 - [Class 8](class_08/README.md)
