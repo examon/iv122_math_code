@@ -1,14 +1,22 @@
 # Class 2
 
+## Permutations, Variations, Combinations
+
+[code](code/combinatorics.py)
+
 ---
 
 ## Pascals Triangle
+
+[code](code/pascals.py)
 
 ![pascals](code/img/pascals.bmp)
 
 ---
 
 ## Exponentiation Implementations Benchmark
+
+[code](code/exponentiation.py)
 
 ```
 exponent digits= 1
@@ -87,6 +95,8 @@ binary_exp_v2: 3007.0 ms
 ---
 
 ## Pi Computation
+
+[code](code/pi_computation.py)
 
 ```
 === running each method for 1 seconds ===

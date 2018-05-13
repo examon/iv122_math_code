@@ -61,7 +61,7 @@ def tree():
     TODO:
     - randomize number of branches, angles and lengths
     """
-    t = Turtle(width=800, height=800, center_origin=True, show_borders_and_origin=False, animate=False, animation_speed=0.005)
+    t = Turtle(width=800, height=800, center_origin=True, show_borders_and_origin=False, animate=True, animation_speed=0.005)
 
     t.set_y(-400)
     length = 200
@@ -95,5 +95,5 @@ def tree():
     draw_branch(length*branch_scale, "left", steps)
     draw_branch(length*branch_scale, "right", steps)
 
-    t.save("img/tree_fractal.svg")
+    t.save("img/tree_fractal_animated.svg")
 tree()

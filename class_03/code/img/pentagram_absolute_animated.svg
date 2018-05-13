@@ -1,0 +1,12 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<line x1="400" y1="100" x2="209" y2="238" stroke="white" stroke-width="5" ><animate attributeName="stroke" values="white;black" begin="0s" dur="0.5s" repeatCount="1" fill="freeze"/></line>
+<line x1="209" y1="238" x2="282" y2="461" stroke="white" stroke-width="5" ><animate attributeName="stroke" values="white;black" begin="0.5s" dur="0.5s" repeatCount="1" fill="freeze"/></line>
+<line x1="282" y1="461" x2="517" y2="461" stroke="white" stroke-width="5" ><animate attributeName="stroke" values="white;black" begin="1.0s" dur="0.5s" repeatCount="1" fill="freeze"/></line>
+<line x1="517" y1="461" x2="590" y2="238" stroke="white" stroke-width="5" ><animate attributeName="stroke" values="white;black" begin="1.5s" dur="0.5s" repeatCount="1" fill="freeze"/></line>
+<line x1="590" y1="238" x2="400" y2="100" stroke="white" stroke-width="5" ><animate attributeName="stroke" values="white;black" begin="2.0s" dur="0.5s" repeatCount="1" fill="freeze"/></line>
+<line x1="400" y1="100" x2="282" y2="461" stroke="white" stroke-width="5" ><animate attributeName="stroke" values="white;black" begin="2.5s" dur="0.5s" repeatCount="1" fill="freeze"/></line>
+<line x1="282" y1="461" x2="590" y2="238" stroke="white" stroke-width="5" ><animate attributeName="stroke" values="white;black" begin="3.0s" dur="0.5s" repeatCount="1" fill="freeze"/></line>
+<line x1="590" y1="238" x2="209" y2="238" stroke="white" stroke-width="5" ><animate attributeName="stroke" values="white;black" begin="3.5s" dur="0.5s" repeatCount="1" fill="freeze"/></line>
+<line x1="209" y1="238" x2="517" y2="461" stroke="white" stroke-width="5" ><animate attributeName="stroke" values="white;black" begin="4.0s" dur="0.5s" repeatCount="1" fill="freeze"/></line>
+<line x1="517" y1="461" x2="400" y2="100" stroke="white" stroke-width="5" ><animate attributeName="stroke" values="white;black" begin="4.5s" dur="0.5s" repeatCount="1" fill="freeze"/></line>
+</svg>

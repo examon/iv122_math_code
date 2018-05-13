@@ -17,7 +17,7 @@ from svglib import SVGImage
 
 
 def pentagram_relative():
-    t = Turtle(center_origin=True, show_borders_and_origin=False, animate=False, animation_speed=0.5)
+    t = Turtle(center_origin=True, show_borders_and_origin=False, animate=True, animation_speed=0.5)
     def draw_polygon_pentagram_relative(t, line_width=1):
         n = 5
         polygon_side = 200
@@ -50,12 +50,12 @@ def pentagram_relative():
         t.reset()
 
     draw_polygon_pentagram_relative(t, 5)
-    t.save("img/pentagram_relative.svg")
+    t.save("img/pentagram_relative_animated.svg")
 pentagram_relative()
 
 
 def pentagram_absolute():
-    img = SVGImage(center_origin=True, show_borders_and_origin=False, animate=False, animation_speed=0.5)
+    img = SVGImage(center_origin=True, show_borders_and_origin=False, animate=True, animation_speed=0.5)
 
     def draw_polygon_pentagram_absolute(img, line_width=1):
         n = 5
@@ -87,5 +87,5 @@ def pentagram_absolute():
             img.add_line(point_1[0], point_1[1], point_2[0], point_2[1], width=line_width)
 
     draw_polygon_pentagram_absolute(img, 5)
-    img.save("img/pentagram_absolute.svg")
+    img.save("img/pentagram_absolute_animated.svg")
 pentagram_absolute()

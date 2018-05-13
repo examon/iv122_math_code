@@ -1,5 +1,17 @@
 # Class 1
 
+## Number Puzzles
+
+[code](code/number_puzzles.py)
+
+---
+
+## Drawing using bitmap graphics
+
+[code](code/bmp_lib_test.py)
+
+![bmp](code/img/test_bmp.bmp)
+
 ---
 
 ## Drawings using vector graphics
