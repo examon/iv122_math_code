@@ -38,7 +38,7 @@
  - Feigenbaum diagram
  - L-systems
 
-### Class 7 - Fractals, complex numbers
+### Class 7 - Fractals & complex numbers
 - [Class 7 page](class_07/README.md)
  - Mandelbrot set
  - Julia set
@@ -49,7 +49,11 @@
  - Linear and affine transformations, **TODO** refactor
  - **TODO** Multiple reduction copy machine
 
+### Class 9 - Probability
+- [Class 9 page](class_09/README.md)
+ - Monty Hall problem
+ - Non-random numbers
+ - Central limit theorem, **TODO** random dice
+ - **TODO** Bayes theorem and simulation
 
-
-- [Class 9](class_09/README.md)
 - [Class 10](class_10/README.md)
