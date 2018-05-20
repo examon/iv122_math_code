@@ -58,5 +58,10 @@
 
 ### Class 10 - Data analysis
 - [Class 10 page](class_10/README.md)
- -
+ - Linear regression, Gradient descent, **TODO** random dataset generation
+ - k-means clustering, **TODO** analyse behavior
 
+### Class 11 - Graphs & mazes
+- [Class 11 page](class_11/README.md)
+ - **TODO** Number maze
+ - **TODO** Maze variations
