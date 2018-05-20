@@ -38,7 +38,15 @@
  - Feigenbaum diagram
  - L-systems
 
-- [Class 7](class_07/README.md)
+### Class 7 - Fractals, complex numbers
+- [Class 7 page](class_07/README.md)
+ - Mandelbrot set
+ - Julia set
+ - Newton fractal
+
+
+
+
 - [Class 8](class_08/README.md)
 - [Class 9](class_09/README.md)
 - [Class 10](class_10/README.md)
