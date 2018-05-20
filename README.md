@@ -32,7 +32,12 @@
  - **TODO** Triangulation
  - Convex hull
 
-- [Class 6](class_06/README.md)
+### Class 6 - Fractals & chaos
+- [Class 6 page](class_06/README.md)
+ - Chaos game, **TODO** generalize
+ - Feigenbaum diagram
+ - L-systems
+
 - [Class 7](class_07/README.md)
 - [Class 8](class_08/README.md)
 - [Class 9](class_09/README.md)
