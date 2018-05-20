@@ -17,8 +17,8 @@
 ### Class 3 - Geometry and turtle graphics
 - [Class 3 page](class_03/README.md)
  - Turtle library
- - Relative vs Absolute drawing, **TODO** more shapes
- - Turtle Fractals, **TODO** snowflake
+ - Relative vs absolute drawing, **TODO** more shapes
+ - Turtle fractals, **TODO** snowflake
 
 ### Class 4 - Geometry and bitmap graphics
 - [Class 4 page](class_04/README.md)
@@ -44,9 +44,12 @@
  - Julia set
  - Newton fractal
 
+### Class 8 - Transformations
+- [Class 8 page](class_08/README.md)
+ - Linear and affine transformations, **TODO** refactor
+ - **TODO** Multiple reduction copy machine
 
 
 
-- [Class 8](class_08/README.md)
 - [Class 9](class_09/README.md)
 - [Class 10](class_10/README.md)
