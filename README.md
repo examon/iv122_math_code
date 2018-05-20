@@ -56,4 +56,7 @@
  - Central limit theorem, **TODO** random dice
  - **TODO** Bayes theorem and simulation
 
-- [Class 10](class_10/README.md)
+### Class 10 - Data analysis
+- [Class 10 page](class_10/README.md)
+ -
+
