@@ -2,6 +2,7 @@ LOCAL_SITE_PACKAGES=$(shell python3 -m site --user-site)
 
 install: clean
 	cp -a libs/* $(LOCAL_SITE_PACKAGES)
+	pip3 install -t $(LOCAL_SITE_PACKAGES) dijkstar
 
 clean:
 	@rm -rf build/ dist/ *.egg-info

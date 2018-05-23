@@ -8,7 +8,7 @@
 
 ## Sierpinksi Triangle
 
-[code](https://github.com/examon/iv122_math_code/blob/d9fd87bf268ad54041d3b9c13b9f5b2734477644/class_6/code/chaos_game.py#L45)
+[code](code/chaos_game.py)
 
 Sierpinsky triangle after `1000`,`10000`,`100000` and `1000000` iterations with `r=0.5`.
 
@@ -37,7 +37,7 @@ Sierpinsky triangle after `1000000` iterations with `r=[0.1 .. 0.9]`.
 
 # Feigenbaum Diagram
 
-[code](https://github.com/examon/iv122_math_code/blob/d9fd87bf268ad54041d3b9c13b9f5b2734477644/class_6/code/feigenbaum_diagram.py#L10)
+[code](code/feigenbaum_diagram.py)
 
 - Using logistic equation:
 ```
@@ -80,7 +80,7 @@ x = [0.875, 1]
 
 
 ## Koch Snowflake
-[code](https://github.com/examon/iv122_math_code/blob/d23fe8339b0874d3592801556019392d2e1e0e60/class_6/code/lsystems.py#L66)
+[code](code/lsystems.py)
 
 [animation](code/img/koch_snowflake_animate.svg)
 
@@ -95,7 +95,7 @@ depth = 6
 
 
 ## Sierpinski Triangle
-[code](https://github.com/examon/iv122_math_code/blob/d23fe8339b0874d3592801556019392d2e1e0e60/class_6/code/lsystems.py#L78)
+[code](code/lsystems.py)
 
 [animation](code/img/sierpinski_triangle_animate.svg)
 
@@ -110,7 +110,7 @@ depth = 8
 
 
 ## Hilbert Curve
-[code](https://github.com/examon/iv122_math_code/blob/d23fe8339b0874d3592801556019392d2e1e0e60/class_6/code/lsystems.py#L91)
+[code](code/lsystems.py)
 
 [animation](code/img/hilbert_curve_animate.svg)
 
@@ -128,7 +128,7 @@ depth = 4
 ## Trees
 
 ### Basic Tree
-[code](https://github.com/examon/iv122_math_code/blob/d23fe8339b0874d3592801556019392d2e1e0e60/class_6/code/lsystems.py#L105)
+[code](code/lsystems.py)
 
 [animation](code/img/basic_tree_animate.svg)
 
@@ -145,7 +145,7 @@ depth = 9
 
 
 ### Fancy Tree 1
-[code](https://github.com/examon/iv122_math_code/blob/d23fe8339b0874d3592801556019392d2e1e0e60/class_6/code/lsystems.py#L120)
+[code](code/lsystems.py)
 
 [animation](code/img/fancy_tree_1_animate.svg)
 
@@ -162,7 +162,7 @@ depth = 5
 
 
 ### Fancy Tree 2
-[code](https://github.com/examon/iv122_math_code/blob/d23fe8339b0874d3592801556019392d2e1e0e60/class_6/code/lsystems.py#L134)
+[code](code/lsystems.py)
 
 [animation](code/img/fancy_tree_2_animate.svg)
 
@@ -179,7 +179,7 @@ depth = 5
 
 
 ### Stochastic Tree
-[code](https://github.com/examon/iv122_math_code/blob/d23fe8339b0874d3592801556019392d2e1e0e60/class_6/code/lsystems.py#L148)
+[code](code/lsystems.py)
 
 ```
 axiom = "F"

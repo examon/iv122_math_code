@@ -4,7 +4,7 @@
 
 ## Mandelbrot Set
 
-[code](https://github.com/examon/iv122_math_code/blob/master/class_7/code/mandelbrot.py)
+[code](code/mandelbrot.py)
 
 Color is picked based on the number of iterations for `z` to get bigger than `2`.
 
@@ -30,7 +30,7 @@ ty = 0.0076739424212133939267267194789347177495898501853501968494667126401230237
 
 ## Julia Set
 
-[code](https://github.com/examon/iv122_math_code/blob/master/class_7/code/julia.py)
+[code](code/julia.py)
 
 Color is picked based on the number of iterations for `z` to get bigger than `2`.
 
@@ -48,7 +48,7 @@ Julia set `z = z*z + c` with changing `c` (animation is also reversed and added 
 
 ## Newton Fractal
 
-[code](https://github.com/examon/iv122_math_code/blob/master/class_7/code/newton.py)
+[code](code/newton.py)
 
 Color is picked based on the distance to the roots.
 

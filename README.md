@@ -63,5 +63,5 @@
 
 ### Class 11 - Graphs & mazes
 - [Class 11 page](class_11/README.md)
- - **TODO** Number maze
+ - Number maze, **TODO** find if solution is unique
  - **TODO** Maze variations
