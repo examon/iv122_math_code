@@ -63,8 +63,8 @@
 
 ### Class 11 - Graphs & mazes
 - [Class 11 page](class_11/README.md)
- - Number maze, **TODO** find if solution is unique
- - **TODO** Maze variations
+ - Number maze, **TODO** more examples, find if solution is unique
+ - Maze variations, **TODO** more examples
 
 ### Class 12 - Generating mazes
 - [Class 12 page](class_12/README.md)
