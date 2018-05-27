@@ -65,3 +65,7 @@
 - [Class 11 page](class_11/README.md)
  - Number maze, **TODO** find if solution is unique
  - **TODO** Maze variations
+
+### Class 12 - Generating mazes
+- [Class 12 page](class_12/README.md)
+ - **TODO** Generate maze
