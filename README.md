@@ -68,4 +68,5 @@
 
 ### Class 12 - Generating mazes
 - [Class 12 page](class_12/README.md)
- - **TODO** Generate maze
+ - Perfect, rectangular maze generation
+ - **TODO** Perfect, non-rectangular maze generation
