@@ -18,3 +18,7 @@
 [animation](code/img/test_animated.svg)
 
 ![](code/img/test.svg)
+
+## Perfect, non-rectangular maze generation
+
+```TODO```
