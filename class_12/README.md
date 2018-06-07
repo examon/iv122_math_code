@@ -15,4 +15,6 @@
 6. Repeat while there are unvisited nodes left.
 ```
 
-![](code/img/test.svg) ![](code/img/test_animated.svg)
+[animation](code/img/test_animated.svg)
+
+![](code/img/test.svg)
