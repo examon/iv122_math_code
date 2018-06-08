@@ -15,9 +15,21 @@
 6. Repeat while there are unvisited nodes left.
 ```
 
-[animation](code/img/test_animated.svg)
+[animation](code/img/rectangular_perfect_animated.svg)
 
-![](code/img/test.svg)
+Maze of size `10x10`.
+
+![](code/img/rectangular_perfect.svg)
+
+
+Mazes of size `50x50` and `100x100`.
+
+![](code/img/rectangular_perfect_50.svg) ![](code/img/rectangular_perfect_100.svg)
+
+Maze of size `400x400`.
+
+![](code/img/rectangular_perfect_400.svg)
+
 
 ## Perfect, non-rectangular maze generation
 

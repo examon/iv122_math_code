@@ -2,92 +2,68 @@
 Tomas Meszaros
 
 Generates maze.
+
+Maze algorithms:
+- http://www.astrolog.org/labyrnth/algrithm.htm
 """
 
 import random
-from pprint import pprint as pp
 
 import dijkstar
 from svglib import SVGImage
 
-WALL = '#'
-FREE_SPACE = '.'
-ON_STACK = '*'
-START = '1'
-END = '2'
-SIDE = 10
-_START = (0, 0)
-_END = (SIDE-1, SIDE-1)
-_DEBUG = False
 
-def print_maze(maze):
-    for row in maze:
-        for item in row:
-            print(item+' ', end='')
-        print()
-    print()
+def make_graph(maze_side_length):
+    """ Makes graph where nodes are rooms and edges are walls.
+    @maze_side_length is number of rooms of the maze in one direction.
 
-# Make maze with full of walls
-maze = []
-for _ in range(SIDE):
-    row = []
-    for _ in range(SIDE):
-        row.append(WALL)
-    maze.append(row)
-maze[0][0] = START
-maze[SIDE-1][SIDE-1] = END
-if _DEBUG:
-    print_maze(maze)
+    """
+    graph = dijkstar.Graph()
+    cost = {"cost": 1}
+    for row_id in range(maze_side_length):
+        for room_id in range(maze_side_length):
+            # add edge: current->right
+            if room_id < maze_side_length-1:
+                graph.add_edge((row_id, room_id), (row_id, room_id+1), cost)
+            # add edge: current->left
+            if room_id >= 1:
+                graph.add_edge((row_id, room_id), (row_id, room_id-1), cost)
+            # add edge: current->bottom
+            if row_id < maze_side_length-1:
+                graph.add_edge((row_id, room_id), (row_id+1, room_id), cost)
+            # add edge: current->top
+            if row_id >= 1:
+                graph.add_edge((row_id, room_id), (row_id-1, room_id), cost)
+    return graph
 
-# Convert maze to graph
-graph = dijkstar.Graph()
-cost = {"cost": 1}
-for row_id in range(len(maze)):
-    for room_id in range(len(maze[0])):
-        # add edge: current->right
-        if room_id < SIDE-1:
-            graph.add_edge((row_id, room_id), (row_id, room_id+1), cost)
-        # add edge: current->left
-        if room_id >= 1:
-            graph.add_edge((row_id, room_id), (row_id, room_id-1), cost)
-        # add edge: current->bottom
-        if row_id < SIDE-1:
-            graph.add_edge((row_id, room_id), (row_id+1, room_id), cost)
-        # add edge: current->top
-        if row_id >= 1:
-            graph.add_edge((row_id, room_id), (row_id-1, room_id), cost)
+def generate_maze(graph):
+    """ Runs DFS and determines which walls to destroy.
+    Returns list of destroyed walls between rooms.
+    """
+    visited = []
+    no_wall = []
+    stack = []
+    START = (0, 0) # upper top
+    stack.append(START)
+    visited.append(START)
 
-if _DEBUG:
-    for i in graph.items():
-        pp(i)
-    print('----')
-
-# Run DFS and determine which walls to destroy
-visited = []
-no_wall = []
-stack = []
-stack.append(_START)
-visited.append(_START)
-
-while len(stack) > 0:
-    current = stack.pop()
-    adj = list(graph[current].keys())
-    # shuffle neighbours, so generation is randomized
-    random.shuffle(adj)
-    for neighbour in adj:
-        if neighbour in visited:
-            continue
-        no_wall.append((current, neighbour))
-        visited.append(neighbour)
-        stack.append(neighbour)
-        if _DEBUG == True:
-            print("visited:", visited)
-            print("stack:", stack)
-            print("no_wall:", no_wall)
-            print("current:", current)
-            print()
+    while len(stack) > 0:
+        current = stack.pop()
+        adj = list(graph[current].keys())
+        # shuffle neighbours, so generation is randomized
+        random.shuffle(adj)
+        for neighbour in adj:
+            if neighbour in visited:
+                continue
+            no_wall.append((current, neighbour))
+            visited.append(neighbour)
+            stack.append(neighbour)
+    return no_wall
 
 def draw_maze(filename, maze_side, missing_walls, show_start_end=True, animate=False, img_size=500, line_width=2):
+    """ Draws maze into svg image.
+    Checks if there should not be missing wall in @missing_walls.
+    """
     size = img_size
     width = line_width
     img = SVGImage(size, size, center_origin=False, show_borders_and_origin=False, animate=animate, animation_speed=0.05)
@@ -99,6 +75,7 @@ def draw_maze(filename, maze_side, missing_walls, show_start_end=True, animate=F
     img.add_line(size, 0, 0, 0, width=2*width)
 
     # draw start and end
+    # start is always upper-top and end always bottom-right
     if show_start_end:
         img.add_circle(size/maze_side/2, size/maze_side/2, size/maze_side/4, fill="green")
         img.add_circle(maze_side*(size/maze_side)-(size/maze_side/2), maze_side*(size/maze_side)-(size/maze_side/2), size/maze_side/4, fill="red")
@@ -114,6 +91,7 @@ def draw_maze(filename, maze_side, missing_walls, show_start_end=True, animate=F
             x1 = x0
             y1 = (row+1)*(size/maze_side)
             img.add_line(x0, y0, x1, y1, width=width)
+
     # draw horizontal walls
     for row in range(maze_side-1):
         for col in range(maze_side):
@@ -127,5 +105,23 @@ def draw_maze(filename, maze_side, missing_walls, show_start_end=True, animate=F
             img.add_line(x0, y0, x1, y1, width=width)
     img.save(filename)
 
-draw_maze(filename="img/test.svg", maze_side=SIDE, missing_walls=no_wall, show_start_end=True, animate=False, img_size=400, line_width=2)
-draw_maze(filename="img/test_animated.svg", maze_side=SIDE, missing_walls=no_wall, show_start_end=False, animate=True, img_size=400, line_width=2)
+MAZE_SIDE_LENGTH = 10
+graph = make_graph(MAZE_SIDE_LENGTH)
+no_wall = generate_maze(graph)
+draw_maze(filename="img/rectangular_perfect.svg", maze_side=MAZE_SIDE_LENGTH, missing_walls=no_wall, show_start_end=True, animate=False, img_size=400, line_width=2)
+draw_maze(filename="img/rectangular_perfect_animated.svg", maze_side=MAZE_SIDE_LENGTH, missing_walls=no_wall, show_start_end=False, animate=True, img_size=400, line_width=2)
+
+MAZE_SIDE_LENGTH = 50
+graph = make_graph(MAZE_SIDE_LENGTH)
+no_wall = generate_maze(graph)
+draw_maze(filename="img/rectangular_perfect_50.svg", maze_side=MAZE_SIDE_LENGTH, missing_walls=no_wall, show_start_end=False, animate=False, img_size=400, line_width=2)
+
+MAZE_SIDE_LENGTH = 100
+graph = make_graph(MAZE_SIDE_LENGTH)
+no_wall = generate_maze(graph)
+draw_maze(filename="img/rectangular_perfect_100.svg", maze_side=MAZE_SIDE_LENGTH, missing_walls=no_wall, show_start_end=False, animate=False, img_size=400, line_width=2)
+
+MAZE_SIDE_LENGTH = 400
+graph = make_graph(MAZE_SIDE_LENGTH)
+no_wall = generate_maze(graph)
+draw_maze(filename="img/rectangular_perfect_400.svg", maze_side=MAZE_SIDE_LENGTH, missing_walls=no_wall, show_start_end=False, animate=False, img_size=800, line_width=1)
