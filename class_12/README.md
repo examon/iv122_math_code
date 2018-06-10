@@ -26,11 +26,25 @@ Mazes of size `50x50` and `100x100`.
 
 ![](code/img/rectangular_perfect_50.svg) ![](code/img/rectangular_perfect_100.svg)
 
-Maze of size `400x400`.
-
-![](code/img/rectangular_perfect_400.svg)
-
+---
 
 ## Perfect, non-rectangular maze generation
 
-```TODO```
+[code](code/maze_pyramid.py)
+
+```
+Algorithm for generation is the same as for the rectangular maze.
+When creating graph, we don't use rectangular grid, but triangles that form pyramid.
+```
+
+[animation](code/img/maze_pyramid_animate_10.svg)
+
+Pyramid with depth level `10`.
+
+![](code/img/maze_pyramid_10.svg)
+
+[animation](code/img/maze_pyramid_animate_100.svg)
+
+Pyramid with depth level `100`.
+
+![](code/img/maze_pyramid_100.svg)

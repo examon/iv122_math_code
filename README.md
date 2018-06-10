@@ -32,13 +32,13 @@
  - **TODO** Triangulation
  - Convex hull
 
-### Class 6 - Fractals & chaos
+### Class 6 - Fractals & chaos (GOOD)
 - [Class 6 page](class_06/README.md)
  - Chaos game, **TODO** generalize
  - Feigenbaum diagram
  - L-systems
 
-### Class 7 - Fractals & complex numbers
+### Class 7 - Fractals & complex numbers (GOOD)
 - [Class 7 page](class_07/README.md)
  - Mandelbrot set
  - Julia set
@@ -66,7 +66,7 @@
  - Number maze, **TODO** more examples, find if solution is unique
  - Maze variations, **TODO** more examples
 
-### Class 12 - Generating mazes
+### Class 12 - Generating mazes (GOOD)
 - [Class 12 page](class_12/README.md)
  - Perfect, rectangular maze generation
- - **TODO** Perfect, non-rectangular maze generation
+ - Perfect, non-rectangular maze generation
