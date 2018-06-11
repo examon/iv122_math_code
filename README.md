@@ -14,7 +14,7 @@
  - Pi computation
  - Exponentiation
 
-### Class 3 - Geometry and turtle graphics
+### Class 3 - Geometry and turtle graphics [BAD]
 - [Class 3 page](class_03/README.md)
  - Turtle library
  - Relative vs absolute drawing, **TODO** more shapes
@@ -26,30 +26,30 @@
  - Polygon
  - Effects
 
-### Class 5 - Geometric algorithms
+### Class 5 - Geometric algorithms [BAD]
 - [Class 5 page](class_05/README.md)
  - Random lines intersections
  - **TODO** Triangulation
  - Convex hull
 
-### Class 6 - Fractals & chaos (GOOD)
+### Class 6 - Fractals & chaos [GOOD]
 - [Class 6 page](class_06/README.md)
  - Chaos game, **TODO** generalize
  - Feigenbaum diagram
  - L-systems
 
-### Class 7 - Fractals & complex numbers (GOOD)
+### Class 7 - Fractals & complex numbers [GOOD]
 - [Class 7 page](class_07/README.md)
  - Mandelbrot set
  - Julia set
  - Newton fractal
 
-### Class 8 - Transformations
+### Class 8 - Transformations [BAD]
 - [Class 8 page](class_08/README.md)
  - Linear and affine transformations, **TODO** refactor
  - **TODO** Multiple reduction copy machine
 
-### Class 9 - Probability
+### Class 9 - Probability [BAD]
 - [Class 9 page](class_09/README.md)
  - Monty Hall problem
  - Non-random numbers
@@ -66,7 +66,7 @@
  - Number maze, **TODO** more examples, find if solution is unique
  - Maze variations, **TODO** more examples
 
-### Class 12 - Generating mazes (GOOD)
+### Class 12 - Generating mazes [GOOD]
 - [Class 12 page](class_12/README.md)
  - Perfect, rectangular maze generation
  - Perfect, non-rectangular maze generation

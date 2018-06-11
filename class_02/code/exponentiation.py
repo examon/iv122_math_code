@@ -15,19 +15,19 @@ import sys
 import timer
 
 
-@timer.timeit("   python_pow:")
+@timer.timeit("     python_pow:")
 def python_pow(n, e, m):
     return pow(n, e, m)
 
 
-@timer.timeit("    naive_pow:")
+@timer.timeit("      naive_pow:")
 def naive_pow(n, e, m):
     r = 1
     for _ in range(e):
         r *= n
     return r % m
 
-@timer.timeit("   binary_exp:")
+@timer.timeit("     binary_exp:")
 def binary_exp(n, e, m):
     """ Not as fast as it could be.
     Could remove function calls and list operatios
@@ -77,7 +77,7 @@ def binary_exp(n, e, m):
     return x % m
 
 
-@timer.timeit("binary_exp_v2:")
+@timer.timeit("  binary_exp_v2:")
 #@profile # uncomment for line_profiler
 def binary_exp_v2(n, e, m):
     """ Faster binary exp version
@@ -102,10 +102,11 @@ def binary_exp_v2(n, e, m):
 # x = n**e mod m
 n = 5
 m = 19
-exponents = list(range(1, 11)) + [10**2, 10**4, 10**5, 10**6, 10**7, 10**8]
-for i in exponents:
-    e = 10**i
-    print("exponent digits=", i)
+
+powers = [4, 5, 6, 7, 8, 10**2, 10**4, 10**5, 10**6, 10**7]
+for power in powers:
+    e = 10**power
+    print("exponent zeroes:", power)
 
     a = python_pow(n, e, m)
 
@@ -116,8 +117,7 @@ for i in exponents:
     c = binary_exp_v2(n, e, m)
     assert(a == c)
 
-    if e < 1000000:
+    if e < 10000000:
         d = naive_pow(n, e, m)
         assert(a == d)
-
     print()
