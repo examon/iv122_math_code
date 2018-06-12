@@ -48,36 +48,84 @@
      [(0, 'S2'), (2, '1'), (3, '3'), (15, 'X')]
 ```
 
+Examples:
+
+```
+Input:
+
+S2 1 1 3
+ 3 2 1 1
+ 2 1 1 2
+ 3 1 2 X
+
+Solution:
+
+[(0, 'S2'), (2, '1'), (3, '3'), (15, 'X')]
+```
+
+```
+Input:
+
+S2 4 4 3 3
+ 2 3 3 2 3
+ 3 2 3 1 3
+ 2 2 3 2 1
+ 1 4 4 4 X
+
+Solution:
+
+[(0, 'S2'), (10, '3'), (13, '1'), (8, '2'), (6, '3'), (9, '3'), (24, 'X')]
+```
+
 ---
 
-## Maze variations - Lamps connecting
+## Connecting lamps
 
 [code](code/3_lamps.py)
 
 ```
-1..#
-.#2#
-.#..
-3..#
+   We have room, where numbers are lamps `#` is wall and `.` is free space.
+   We want to connect lamps with shortest possible cable.
 
-1oo#
-o#2#
-o#..
-3..#
+   1..#
+   .#2#
+   .#..
+   3..#
+
+   Algorithm used:
+   - iterate over each free space
+   - find shortest path from each free space to each lamp, get final sum
+   - pick the shortest cable from the computed possibilities
+
+   Output looks like this:
+
+   1oo#
+   o#2#
+   o#..
+   3..#
+
+   `o` is cable.
+
+```
+
+Examples:
+
+```
+Input:    Solution:
+
+1..#      1oo#
+.#2#      o#2#
+.#..      o#..
+3..#      3..#
 ```
 
 ```
-1..#.##
-.#.#...
-.....#2
-#.##.#.
-.....#.
-.#3.##.
+Input:    Solution:
 
-1..#.##
-o#.#ooo
-ooooo#2
-#o##.#.
-.oo..#.
-.#3.##.
+1..#.##   1..#.##
+.#.#...   o#.#ooo
+.....#2   ooooo#2
+#.##.#.   #o##.#.
+.....#.   .oo..#.
+.#3.##.   .#3.##.
 ```

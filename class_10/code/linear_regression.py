@@ -90,3 +90,5 @@ def compute_and_plot(dataset, save_tag):
 
 compute_and_plot("data/faithful.txt", save_tag="faithful")
 compute_and_plot("data/linreg.txt", save_tag="linreg")
+compute_and_plot("data/generated1.txt", save_tag="generated1")
+compute_and_plot("data/generated2.txt", save_tag="generated2")

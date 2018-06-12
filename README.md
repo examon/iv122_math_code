@@ -29,7 +29,7 @@
 ### Class 5 - Geometric algorithms [BAD]
 - [Class 5 page](class_05/README.md)
  - Random lines intersections
- - **MISSING** Triangulation
+ - **UNFINISHED** Triangulation
  - Convex hull
 
 ### Class 6 - Fractals & chaos [GOOD]
@@ -47,7 +47,7 @@
 ### Class 8 - Transformations [BAD]
 - [Class 8 page](class_08/README.md)
  - Linear and affine transformations, **TODO** refactor
- - **MISSING** Multiple reduction copy machine
+ - **UNFINISHED** Multiple reduction copy machine
 
 ### Class 9 - Probability [BAD]
 - [Class 9 page](class_09/README.md)
@@ -58,13 +58,13 @@
 
 ### Class 10 - Data analysis
 - [Class 10 page](class_10/README.md)
- - Linear regression, Gradient descent, **TODO** random dataset generation
+ - Linear regression, Gradient descent
  - k-means clustering, **TODO** analyse behavior
 
 ### Class 11 - Graphs & mazes
 - [Class 11 page](class_11/README.md)
- - Number maze, **TODO** more examples, find if solution is unique
- - Maze variations, **TODO** more examples
+ - Number maze, **TODO** find if solution is unique
+ - Maze variations (connecting lamps)
 
 ### Class 12 - Generating mazes [GOOD]
 - [Class 12 page](class_12/README.md)

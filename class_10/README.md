@@ -56,7 +56,18 @@ The more closer to red the lines is, the more iteration it took to compute it.
 
 ![](code/img/linear_regression_linreg.png)
 
+
 ---
+
+dataset: [generated1](code/data/generated1.txt)
+
+```
+sample size = 100
+x = [0, 10]
+y = [50, 100]
+```
+
+![](code/img/linear_regression_generated1.png)
 
 ## k-means Clustering
 

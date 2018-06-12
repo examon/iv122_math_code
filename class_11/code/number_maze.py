@@ -18,6 +18,8 @@ N is number on the current tile.
 
 import dijkstar
 
+_DEBUG = False
+
 def load_maze(txt_file):
     """ Loads maze from @txt_file.
     Assigns each node unique @node_id, because node names are not unique.
@@ -105,8 +107,9 @@ def solve_maze(maze_txt):
             if i+number < len(maze):
                 graph.add_edge(node[0], maze[i+number][j][0], {"cost": 1})
 
-    for i in graph.items():
-        pp(i)
+    if _DEBUG:
+        for i in graph.items():
+            pp(i)
 
     cost_func = lambda u, v, e, prev_e: e['cost']
     result = dijkstar.find_path(graph, start, end, cost_func=cost_func)
