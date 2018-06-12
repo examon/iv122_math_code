@@ -10,26 +10,10 @@
 
 [code](code/chaos_game.py)
 
-Sierpinsky triangle after `1000`,`10000`,`100000` and `1000000` iterations with `r=0.5`.
+Sierpinsky triangle after `100`,`1000`,`10000` and `1000000` iterations with `r=0.5`.
 
-![s](code/img/chaos_game_sierpinski_r_0.5_after_1000.bmp)
-![s](code/img/chaos_game_sierpinski_r_0.5_after_10000.bmp)
-![s](code/img/chaos_game_sierpinski_r_0.5_after_100000.bmp)
-![s](code/img/chaos_game_sierpinski_r_0.5_after_1000000.bmp)
-
-<!---
-Sierpinsky triangle after `1000000` iterations with `r=[0.1 .. 0.9]`.
-
-![s](code/img/chaos_game_sierpinski_r_0.1_after_1000000.bmp)
-![s](code/img/chaos_game_sierpinski_r_0.2_after_1000000.bmp)
-![s](code/img/chaos_game_sierpinski_r_0.3_after_1000000.bmp)
-![s](code/img/chaos_game_sierpinski_r_0.4_after_1000000.bmp)
-![s](code/img/chaos_game_sierpinski_r_0.5_after_1000000.bmp)
-![s](code/img/chaos_game_sierpinski_r_0.6_after_1000000.bmp)
-![s](code/img/chaos_game_sierpinski_r_0.7_after_1000000.bmp)
-![s](code/img/chaos_game_sierpinski_r_0.8_after_1000000.bmp)
-![s](code/img/chaos_game_sierpinski_r_0.9_after_1000000.bmp)
--->
+![](code/img/chaos_game_sierpinski_r_0.5_after_100.bmp) ![](code/img/chaos_game_sierpinski_r_0.5_after_1000.bmp)
+![](code/img/chaos_game_sierpinski_r_0.5_after_10000.bmp) ![](code/img/chaos_game_sierpinski_r_0.5_after_1000000.bmp)
 
 ---
 

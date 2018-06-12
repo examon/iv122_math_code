@@ -12,8 +12,8 @@ import math
 
 from bmplib import BMPImage
 
-WIDTH = 1000
-HEIGHT = 1000
+WIDTH = 400
+HEIGHT = 400
 BLACK = (0, 0, 0)
 RED = (255, 0, 0)
 GREEN = (0, 255, 0)
@@ -42,12 +42,12 @@ def point_between_points(a, b, r=0.5):
         raise Exception("Invalid condition:", chosen_point, x, r)
 
 
-def draw_sierpinski_triangle(r=0.5, iterations=1000000, save_after=[1000, 10000, 100000]):
+def draw_sierpinski_triangle(r=0.5, iterations=1000000, save_after=[100, 1000, 10000]):
     img = BMPImage(width=WIDTH, height=HEIGHT, scale=1, bg="black", origin="cartesian")
 
     SIDE = int(HEIGHT/1.2)
     ITERATIONS = iterations
-    DISCARD = 100
+    DISCARD = 10
 
     h = int((math.sqrt(3)/2)*SIDE)
 
@@ -67,5 +67,4 @@ def draw_sierpinski_triangle(r=0.5, iterations=1000000, save_after=[1000, 10000,
             img.save("img/chaos_game_sierpinski_r_{R}_after_{ITERS}.bmp".format(R=r, ITERS=i))
     img.save("img/chaos_game_sierpinski_r_{R}_after_{ITERS}.bmp".format(R=r, ITERS=ITERATIONS))
 
-#for i in range(0, 10):
-#    draw_sierpinski_triangle(r=i/10)
+draw_sierpinski_triangle()
